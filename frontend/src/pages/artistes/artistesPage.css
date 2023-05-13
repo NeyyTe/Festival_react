@@ -1,0 +1,345 @@
+/* Global */
+
+.containerClips
+{
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 260px 1fr;
+    gap: 10px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 0 0 20px;
+    background-color: #858585;
+}
+
+.containerClips header
+{
+    grid-area: 1 / 1 / 2 / 3;
+    position: fixed;
+}
+
+.containerClips main
+{
+    grid-area: 2 / 2 / 3 / 3;
+    padding: 40px 10px 0;
+}
+
+/* SlideBar */
+
+.slideBar
+{
+    position: fixed;
+    top: 135px;
+    width: 260px;
+    height: 800px;
+    z-index: 5;
+    color: white;
+}
+
+.slideBar ul
+{
+    background-color: var(--networksPrimary);
+    width: 90%;
+    height: 90%;
+    list-style-type: none;
+    padding: 25px;
+    margin: auto;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: inset 0px 0px 25px rgba(255,255,255,0.5);
+}
+
+.slideBar a
+{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: var(--thirdColor);
+    font-weight: bold;
+    font-size: 1.2em;
+    filter: drop-shadow(0 0 1px #000);
+    -webkit-filter: drop-shadow(0 0 1px #000);
+}
+
+.slideBar li
+{
+    margin: 10px 0;
+    line-height: 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+.slideBar li:first-child, .slideBar li:nth-child(2)
+{
+    background-color: var(--secondaryColor);
+}
+
+.slideBar li:hover a
+{
+    background-color: #f1f1f1;
+    color: var(--secondaryColor);
+    filter: drop-shadow(0 0 1px #000);
+    -webkit-filter: drop-shadow(0 0 1px #000);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.slideBar li:hover i 
+{
+    color: var(--secondaryColor);
+}
+
+.slideBar li:nth-child(2)
+{
+    margin-bottom: auto;
+}
+
+.slideBar li:last-child
+{
+    margin-bottom: auto;
+}
+
+.slideBar.activeSlideBar
+{
+    display: block;
+}
+
+/* Clips Filter  */
+
+.filterClips
+{
+    background-color: var(--networksPrimary);
+    width: 95%;
+    min-height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.filterClips .buttonTabs
+{
+    background-color: transparent;
+    color: var(--txt_white);
+    font-weight: bold;
+    border: none;
+    height: 50px;
+    margin: 5px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.filterClips .buttonSlideBar
+{
+    background-color: transparent;
+    max-width: 75px;
+    border: none;
+    border-right: 1px solid rgba(255,255,255,0.5);
+    padding-right: 15px;
+    margin-right: 15px;
+    display: none;
+}
+
+.containerClips .buttonTabs.activeClips
+{
+    background-color: var(--secondaryColor);
+    text-shadow: 0px 0px 2px #000;
+}
+
+
+
+/* Pagination */
+
+.pagination
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0 40px;
+}
+
+.pagination button
+{
+    background-color: var(--networksPrimary);
+    color: var(--thirdColor);
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    border: none;
+    filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.2));
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.2));
+}
+
+/* Clips */
+
+.clips 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.clips
+{
+    display: none;
+}
+
+.clips.activeTabs
+{
+    display: grid;
+}
+
+/* Cards */
+
+.card
+{
+    min-width: 260px;
+    min-height: 350px;
+    padding: 0 0 10px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    text-decoration: none;
+    color: var(--thirdColor);
+    background-color: var(--networksPrimary);
+}
+
+.card:hover
+{
+    background-color: var(--secondaryColor);
+    color: var(--networksPrimary);
+    box-shadow: 0 0 5px var(--secondaryColor);
+}
+
+/* Video */
+
+/* .card video
+{
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+} */
+
+/* Description */
+
+.card .desc
+{
+    width: 100%;
+    padding: 5px 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Views and Datetime*/
+
+.card .desc div:nth-child(1)
+{
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card .desc div:nth-child(2) span
+{
+    font-size: 1rem;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 10px;
+    margin: auto;
+    color: var(--txt_white);
+}
+
+.card:hover .desc div:nth-child(1) span
+{
+    border: 1px solid var(--networksPrimary);
+}
+
+/* Image  Streamer and Title Video */
+
+.card .desc div:nth-child(2)
+{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.card img
+{
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    margin: 0 10px 0 0;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.card h2
+{
+    font-size: 1.2em;
+    text-align: start;
+}
+
+/* Name Streamer and Activities */
+
+.card .desc p 
+{
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+    padding: 10px 15px 0px;
+}
+
+.card:hover .desc p 
+{
+    color: rgba(0,0,0,0.7);
+}
+
+
+.title{
+    color: white
+}
+
+

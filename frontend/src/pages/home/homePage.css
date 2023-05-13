@@ -1,0 +1,204 @@
+/* =================================================
+                SECTION_FEATURES_START
+================================================= */
+
+.features_wrapper {
+  display: flex;
+  flex-direction: column;
+
+  background: rgb(19, 17, 54);
+  position: relative;
+  padding: 3rem 0;
+  padding-bottom: 10rem;
+}
+
+.features {
+  width: 80%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  place-items: center;
+
+  margin: 0 auto;
+}
+
+.features_cards {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: var(--txt_white);
+
+  transition: 0.3s ease-in-out;
+  box-shadow: 5px 5px 20px rgb(29, 29, 29);
+}
+
+.features_cards:hover {
+  transform: translate(0px, -15px);
+  box-shadow: 0px 0px 30px blueviolet;
+}
+.features_cards > * {
+  margin: 20px;
+}
+
+.features_cards p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
+}
+
+.features_cards span {
+  font-size: 1rem;
+  font-family: helvetica;
+  line-height: 150%;
+  color: rgb(160, 160, 160);
+}
+
+.features_cards img {
+  margin: 0 auto;
+}
+
+.link_information_wrapper{
+  display: flex;
+	justify-content: center;
+  margin-top: 2rem ;
+}
+
+
+.link_information{
+  color: white;
+	font-size: 1.3rem;
+	margin-top: 2rem;
+	padding: 0.75rem 1rem;
+	background-color:var(--violet);
+	border-radius:10px;
+}
+
+
+/* =================================================
+                SECTION_FEATURES_END
+================================================= */
+
+
+
+/* =================================================
+                WAVE SEPARATOR
+================================================= */
+.wave_separator {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave_separator svg {
+  position: absolute;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 72px;
+}
+
+.wave_separator .shape-fill {
+  fill: #131136;
+}
+/* =================================================
+                WAVE SEPARATOR
+================================================= */
+
+
+/* =========================================================
+                SECTION 1 - Expérience inoubliable - START
+============================================================ */
+
+.section1_experience {
+  padding-top: 5rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.section1_experience h2 {
+  text-align: center;
+}
+
+
+.section1_experience h2 span{
+  color: #337357;
+}
+
+.section1_content {
+  width: 60%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 1fr;
+  gap: 30px;
+  place-items: center;
+
+  margin: 0 auto;
+
+}
+
+.section1_text > * {
+  padding: 1rem;
+}
+
+.section1_text h3 {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.section1_text p {
+  font-size: 1rem;
+  font-family: helvetica;
+  color: rgb(59, 59, 59);
+}
+
+
+.section1_text span{
+  font-weight: 600;
+}
+
+
+/* .section1_content img{
+  filter: drop-shadow(0 0 0.3rem rgb(70, 70, 70));
+  transition: 0.4s linear;
+} */
+
+/* =========================================================
+                SECTION 1 - Expérience inoubliable - END
+============================================================ */
+
+
+/* =========================================================
+                        BANNER SPONSORS START
+============================================================ */
+
+.banner_sponso_wrapper{
+  width: 100%;
+margin: 5rem 0;
+}
+
+.banner{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.banner img{
+ width: 200px;
+object-fit:contain;
+}
+
+.banner .jager{
+ 
+object-fit: cover;
+}
+
+
+/* =========================================================
+                        BANNER SPONSORS END
+============================================================ */

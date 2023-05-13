@@ -1,0 +1,136 @@
+.footer_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    padding-bottom: 250px;
+  }
+  
+  .footer {
+    width: 100%;
+    height: 100%;
+    background:black;
+  
+    position: relative;
+   
+  }
+  
+  .row {
+    width: 90%;
+    display: flex;
+
+    
+  }
+  
+  .footer-col {
+    width: 50%;
+    padding: 0 15px;
+  }
+  
+  .footer-col ul li a {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: white;
+    text-transform: capitalize;
+    display: block;
+    line-height: 2.5;
+    transition: all 0.3s ease;
+    font-family: helvetica;
+  }
+  
+  .footer-col ul li a:hover {
+    padding-left: 10px;
+  }
+  
+  .footer-col h4 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    
+  }
+  
+  .footer-col h4:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--gold);
+    height: 2px;
+    box-sizing: border-box;
+    width: 70px;
+  }
+
+  .logo_footer{
+margin-right: 100px;
+transition: 0.3s ease-in;
+  }
+  .logo_footer:hover{
+    filter: drop-shadow(0 0 1rem blueviolet);
+  }
+  
+  /* ------------------------  Social link & Icons D ------------------------ */
+  .social_links {
+    display: flex;
+    justify-content: space-center;
+    gap: 25px;
+  }
+  
+  .social_links a img {
+    width: 40px;
+    transition: all 0.3s ease;
+  }
+  
+  .social_links a img:hover {
+    transform: translate(0px, -7px);
+  }
+  
+  .mode_paiement_icons {
+    padding-top: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .social_paiement_container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .premiere_col li {
+    text-decoration: underline;
+  }
+  
+  .fa-envelope,
+  .fa-phone,
+  .fa-location-dot {
+    color: var(--gold);
+  }
+
+  .dog
+  {
+ 
+    display: block;
+    width: 600px;
+    position: absolute;
+    left: calc(50% - 300px);
+    height: 210px;
+    bottom:0;
+    transition: all 800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    background: url(./images/dl_dog.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    will-change: transform;
+  }
+
+  .dog:hover{
+    height: 300px;
+    filter: drop-shadow(0 0 1rem blueviolet);
+  }

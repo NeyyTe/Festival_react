@@ -1,0 +1,121 @@
+
+.slider_wrapper {
+	background: rgb(19,17,54);
+	background: linear-gradient(0deg, rgba(19,17,54,1) 0%, rgba(0,0,0,1) 100%);
+	
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 2.5rem;
+
+}
+
+.slider_wrapper > div{
+	margin: 40px auto;
+}
+
+.slider_wrapper > h2{
+	font-size: 3rem;
+	font-family: "Cinzel Decorative", cursive;
+	text-align: center;
+	color: white;
+}
+
+.slider_wrapper > h2 span{
+	color: var(--gold);
+}
+
+.slider{
+	
+	display: flex;
+}
+
+.item{
+	transition: 0.4s ease-in-out;
+	animation: animate 15s linear  infinite alternate;
+	animation-delay: 2s;
+}
+.items {
+	position: relative;
+	
+}
+
+.item_body{
+	position: absolute;
+color: white;
+	
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, -50%);
+}
+
+.item_body h3{
+	font-size: 1.4rem;
+	text-shadow: 1px 1px 5px  black;
+}
+
+.item_body p{
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+
+.item img
+{
+	opacity: 0.8;
+	border-radius: 15px;
+	object-fit: cover;
+	min-width: 300px;
+min-height:300px;
+max-width: 300px;
+max-height:300px;
+margin: 0 20px;
+transition: 0.7s ease-out;
+outline: 1px solid rgb(114, 114, 114);
+
+	}
+
+	.items img:hover{
+	opacity: 1;
+	outline: 1px solid rgb(238, 166, 10);
+	}
+
+	.item:hover{
+		transform: scale(1.05);
+		opacity: 1;
+	}
+
+.item:hover p{
+	color: rgb(238, 166, 10);
+	text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.slider:hover .item {
+	animation-play-state: paused;
+}
+@keyframes animate {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(-1800px, 0, 0);
+	}
+}
+
+
+.link_artistes_wrapper{
+
+	display: flex;
+	justify-content: center;
+
+}
+.link_artistes{
+	color: white;
+	font-size: 1.3rem;
+	margin-top: 2rem;
+	padding: 0.75rem 1rem;
+	background-color:var(--violet);
+	border-radius:10px;
+}
+
+

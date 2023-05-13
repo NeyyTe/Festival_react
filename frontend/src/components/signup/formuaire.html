@@ -1,0 +1,78 @@
+ <div className="auth-wrapper">
+      <div className="auth-inner">
+        <form onSubmit={handleSubmit}>
+          <h3>Inscrivez-vous</h3>
+          <div>
+            S'enregister comme
+            <input
+              type="radio"
+              name="UserType"
+              value="User"
+              onChange={(e) => setUserType(e.target.value)}
+            />
+            Utilisateur
+            <input
+              type="radio"
+              name="UserType"
+              value="Admin"
+              onChange={(e) => setUserType(e.target.value)}
+            />
+            Admin
+          </div>
+          {userType === "Admin" ? (
+            <div className="input_wrapper">
+              <label>Secret Key</label>
+              <input
+                type="text"           
+                placeholder="Secret Key"
+                onChange={(e) => setSecretKey(e.target.value)}
+              />
+            </div>
+          ) : null}
+
+          <div className="input_wrapper">
+            <label>Prénom</label>
+            <input
+              type="text"
+              placeholder="Entrez votre prénom.."
+              onChange={(e) => setFname(e.target.value)}
+            />
+          </div>
+
+          <div className="input_wrapper">
+            <label>Nom</label>
+            <input
+              type="text"
+              placeholder="Entrez votre nom.."
+              onChange={(e) => setLname(e.target.value)}
+            />
+          </div>
+
+          <div className="input_wrapper">
+            <label>Adresse E-mail</label>
+            <input
+              type="email"         
+              placeholder="Entrez votre e-mail.."
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+
+          <div className="input_wrapper">
+            <label>Mot de passe</label>
+            <input
+              type="password"            
+              placeholder="Entrez votre mot de passe.."
+              onChange={(e) => setPassword(e.target.value)} />
+              </div>
+    
+              <div className="submit_wrapper">
+                <button type="submit" className="btn">
+                  S'inscrire
+                </button>
+              </div>
+              <p className="forgot-password">
+                Déjà inscrit ? <a href="/sign-in">Se connecter</a>
+              </p>
+            </form>
+          </div>
+        </div>

@@ -1,0 +1,142 @@
+.header {
+  width: 100%;
+  min-height: 10vh;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 1%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+ 
+}
+
+header h1 {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav_links ul {
+  display: flex;
+  margin: 0;
+  
+}
+
+.nav_links li {
+  padding: 0 2rem;
+  margin: auto 0;
+ 
+}
+
+.nav_links li a {
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 1.3em;
+  margin: 0;
+  position: relative;
+  
+}
+
+.nav_links li:nth-child(5) {
+  border-radius: 20px;
+  padding: 0.75rem 1rem;
+  background-color: var(--clr-neon);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.nav_links li a:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transition: width 0.3s;
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  -ms-transition: width 0.3s;
+  -o-transition: width 0.3s;
+}
+
+.nav_links
+  li:not(.nav_links li:nth-child(5), .nav_links li:nth-child(6))
+  a:hover:before {
+  width: 100%;
+}
+
+.nav_links:not(
+    .nav_links li:nth-child(5),
+    .nav_links li:nth-child(6)
+  )[aria-current="page"] {
+  color: var(--clr-neon);
+}
+
+.cta_tickets {
+  color: white;
+  padding: 9px 25px;
+  background-color: blueviolet;
+  border-radius: 30px;
+  font-size: 1.3em;
+}
+
+/* =================================================
+                    Menu_Hamburger
+================================================= */
+.menu {
+  position: absolute;
+  top: 25px;
+  right: 65px;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.menu .hamburger,
+.menu .close {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  display: none;
+}
+
+.menu .hamburger.active,
+.menu .close.active {
+  display: block;
+}
+
+.nav_links .icons {
+  display: none;
+}
+
+
+@media all and (max-width: 920px){
+  .nav_links .icons {
+    display: block;
+}
+
+.span_links {
+  display: none;
+}
+
+.header{
+  justify-content: center;
+ 
+}
+}
+/* =================================================
+                    Menu_Hamburger
+================================================= */
+
+
