@@ -135,43 +135,38 @@
 
 import "./signup.css";
 import React, { useState } from "react";
+import axios from "axios";
 
 export default function Signup() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
-  const [ConfirmEmail,setConfirmEmail] = useState("");
+  const [ConfirmEmail, setConfirmEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
     setErrorMessage("");
 
-if(email!==ConfirmEmail){
-  setError(true);
-  setErrorMessage("L'email n'est pas identique");
-  return
-}
+    if (email !== ConfirmEmail) {
+      setError(true);
+      setErrorMessage("L'email n'est pas identique");
+      return;
+    }
+
     try {
-      const response = await fetch("http://localhost:5000/register", {
-        method: "POST",
-        crossDomain: true,
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
+      const response = await axios.post(
+        "http://localhost:5000/backend/authentification/register",
+        {
           fname,
           email,
           lname,
           password,
-        }),
-      });
+        }
+      );
 
       if (response.ok) {
         window.location.replace("/"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
@@ -218,7 +213,7 @@ if(email!==ConfirmEmail){
           <div className="input_wrapper">
             <label>Confirmer l'adresse mail</label>
             <input
-            value={ConfirmEmail}
+              value={ConfirmEmail}
               type="email"
               placeholder="Entrez votre e-mail.."
               onChange={(e) => setConfirmEmail(e.target.value)}

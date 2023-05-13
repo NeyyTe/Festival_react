@@ -1,50 +1,43 @@
-import './login.css'
-
-import React, { Component, useState } from "react";
+import "./login.css";
+import React, { useState } from "react";
+import axios from "axios";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(e) {
-    e.preventDefault();
 
-    console.log(email, password);
-    fetch("http://localhost:5000/login-user", {
-      method: "POST",
-      crossDomain: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify({
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+   };
+
+   try {
+    const response =  axios.post(
+      "http://localhost:5000/backend/authentification/register",
+      {
         email,
         password,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data, "userRegister");
-        if (data.status == "ok") {
-          alert("login successful");
-          window.localStorage.setItem("token", data.data);
-          window.localStorage.setItem("loggedIn", true);
+      }
+    );
 
-          window.location.href = "./userDetails";
-        }
-      });
+    if (response.ok) {
+      window.location.replace("/"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
+    }
+  } catch (error) {
+    console.error(error);
+    setError(true);
+    setErrorMessage("Une erreur s'est produite lors de l'inscription.");
   }
+  
 
   return (
     <div className="auth-wrapper">
       <div className="auth-inner">
         <form onSubmit={handleSubmit}>
-          <h3>Sign In</h3>
-          
+          <h3>Se connecter</h3>
 
           <div className="mb-3">
-            <label>Email address</label>
+            <label>Adresse Email</label>
             <input
               type="email"
               className="form-control"
