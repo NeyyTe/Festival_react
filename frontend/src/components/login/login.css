@@ -1,0 +1,102 @@
+.container_wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: #dde1e7;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.container_login {
+  width: 350px;
+  height: 500px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #dde1e7;
+  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+
+.brand-logo {
+  height: 140px;
+  width: 140px;
+  background: url("../../../public/assets/images/logo1.png");
+  margin: auto;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.brand-title {
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: var(--clr-neon);
+  letter-spacing: 1px;
+}
+
+.inputs {
+  text-align: left;
+  margin-top: 30px;
+}
+
+label,
+input,
+button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+label {
+  margin-bottom: 4px;
+}
+
+label:nth-of-type(2) {
+  margin-top: 12px;
+}
+
+input::placeholder {
+  color: gray;
+}
+
+input {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff73;
+}
+
+.button_login {
+  color: white;
+  margin-top: 20px;
+  background: var(--clr-neon);
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 2px 2px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.2s;
+}
+
+.button_login:hover {
+  background-color: rgb(183, 106, 255);
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #21202073;
+  transition: 0.2s ease-in-out;
+}
+
+.button_login:focus {
+  color: #000000;
+  background-color: blueviolet;
+}

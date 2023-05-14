@@ -2,6 +2,7 @@ import "./login.css";
 import React, { useState } from "react";
 import axios from "axios";
 
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -44,13 +45,13 @@ export default function Login() {
             <label>E-mail</label>
             <input
               type="email"
-              placeholder="votreEmail@exemple.com"
+              placeholder="email@exemple.com"
               onChange={(e) => setEmail(e.target.value)}
             />
             <label>Mot de passe</label>
             <input
               type="password"
-              placeholder="Minimum 6 lettres"
+              placeholder="Minimum de 6 lettres"
               onChange={(e) => setPassword(e.target.value)}
             />
             <button class="button_login"type="submit">SE CONNECTER</button>

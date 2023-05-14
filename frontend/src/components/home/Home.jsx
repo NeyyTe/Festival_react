@@ -1,5 +1,6 @@
 import React from "react";
 import "./home.css";
+import logo2 from './images/logo2.png';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
           </div>
 
           <div className="right">
+            <div><img className="logo_main"src={logo2} alt="" /></div>
             <div className="main_title_right">
               <h1>LES NUITS SECRÈTES</h1>
             </div>

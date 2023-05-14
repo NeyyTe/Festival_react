@@ -121,7 +121,7 @@ function HomePage() {
             <p>
               Notre festival propose une variété d'activités pour satisfaire
               tous les goûts, des <span>attractions aquatique</span> aux
-              <span> feux d'aritifices</span>, en passant par les
+              <span> feux d'artifices</span>, en passant par les
               <span> dégustations de nourritures</span> et
               <span> de boissons locales</span>.
             </p>

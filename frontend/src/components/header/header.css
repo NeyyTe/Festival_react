@@ -42,11 +42,19 @@ header h1 {
 .nav_links li:nth-child(5) {
   border-radius: 20px;
   padding: 0.75rem 1rem;
-  background-color: var(--clr-neon);
+  background-image: linear-gradient(to right, #8646c5, #d79613, #d79b22, #8E37D7);
+  background-size: 320% 100%;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+  transition: 0.8s;
+ 
+}
+
+.nav_links li:nth-child(5):hover{
+  background-position: 100% 0;
+  box-shadow: 0 0 15px 10px rgba(116, 79, 168, 0.75);
 }
 
 .nav_links li a:before {

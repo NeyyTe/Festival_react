@@ -40,7 +40,7 @@ export default function Signup() {
       //   window.location.replace("/"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
       // }
       if (response.ok) {
-        navigate("/") // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
+        navigate("/"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
       }
     } catch (error) {
       console.error(error);

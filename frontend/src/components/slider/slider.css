@@ -114,8 +114,17 @@ outline: 1px solid rgb(114, 114, 114);
 	font-size: 1.3rem;
 	margin-top: 2rem;
 	padding: 0.75rem 1rem;
-	background-color:var(--violet);
+	background-image: linear-gradient(to right, #ab7b1b, #8646c5, #c5932d, #8E37D7);
+   
 	border-radius:10px;
+	background-size: 300% 100%;
+	transition: all .4s ease-in-out;
+}
+
+.link_artistes:hover{
+	background-position: 100% 0;
+	box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+	
 }
 
 
