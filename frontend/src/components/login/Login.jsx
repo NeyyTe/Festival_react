@@ -5,78 +5,56 @@ import axios from "axios";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   };
-
-   try {
-    const response =  axios.post(
-      "http://localhost:5000/backend/authentification/register",
-      {
-        email,
-        password,
-      }
-    );
-
-    if (response.ok) {
-      window.location.replace("/"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
-    }
-  } catch (error) {
-    console.error(error);
-    setError(true);
-    setErrorMessage("Une erreur s'est produite lors de l'inscription.");
-  }
+    setErrorMessage("");
   
+    try {
+      const response = axios.post(
+        "http://localhost:5000/backend/authentification/register",
+        {
+          email,
+          password,
+        }
+      );
+
+      if (response.ok) {
+        window.location.replace("/"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
+      }
+
+
+    } catch (error) {
+      console.error(error);
+      setErrorMessage(
+        "Votre adresse e-mail ou votre mot de passe sont incorrect."
+      );
+    }
+  };
 
   return (
-    <div className="auth-wrapper">
-      <div className="auth-inner">
+    <div className="container_wrapper">
+      <div class="container_login">
         <form onSubmit={handleSubmit}>
-          <h3>Se connecter</h3>
-
-          <div className="mb-3">
-            <label>Adresse Email</label>
+          {errorMessage && <p>{errorMessage}</p>}
+          <div class="brand-logo"></div>
+          <div class="brand-title">Les Nuits Secrètes</div>
+          <div class="inputs">
+            <label>E-mail</label>
             <input
               type="email"
-              className="form-control"
-              placeholder="Enter email"
+              placeholder="votreEmail@exemple.com"
               onChange={(e) => setEmail(e.target.value)}
             />
-          </div>
-
-          <div className="mb-3">
-            <label>Password</label>
+            <label>Mot de passe</label>
             <input
               type="password"
-              className="form-control"
-              placeholder="Enter password"
+              placeholder="Minimum 6 lettres"
               onChange={(e) => setPassword(e.target.value)}
             />
+            <button class="button_login"type="submit">SE CONNECTER</button>
           </div>
-
-          <div className="mb-3">
-            <div className="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                className="custom-control-input"
-                id="customCheck1"
-              />
-              <label className="custom-control-label" htmlFor="customCheck1">
-                Remember me
-              </label>
-            </div>
-          </div>
-
-          <div className="d-grid">
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
-          </div>
-          <p className="forgot-password text-right">
-            <a href="/sign-up">Sign Up</a>
-          </p>
         </form>
       </div>
     </div>

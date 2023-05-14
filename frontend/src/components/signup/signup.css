@@ -1,6 +1,7 @@
 .auth-wrapper {
   height: 100dvh;
-  background: url(./images/bg-blue.jpg);
+  /* background: url(./images/bg-blue.jpg); */
+  background: #ecf0f3;
   display: flex;
   justify-content: center;
   flex-direction: column;
