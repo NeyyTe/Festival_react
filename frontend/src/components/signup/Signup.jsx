@@ -1,7 +1,6 @@
 import "./signup.css";
 import React, { useState } from "react";
 
-import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [fname, setFname] = useState("");
@@ -11,7 +10,7 @@ export default function Signup() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const navigate = useNavigate();
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,6 +48,7 @@ export default function Signup() {
       // if (res.ok) {
       //   navigate("/login"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
       // }
+
     } catch (error) {
       console.error(error);
       setError(true);

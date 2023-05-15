@@ -21,10 +21,10 @@ function Footer() {
               <h4>L'entreprise</h4>
               <ul>
                 <li>
-                  <a href="#">Mention Légales</a>
+                  <a href="">Mention Légales</a>
                 </li>
                 <li>
-                  <a href="#">Conditions Générales</a>
+                  <a href="">Conditions Générales</a>
                 </li>
               </ul>
             </div>
@@ -48,13 +48,13 @@ function Footer() {
               <div className="social_paiement_container">
                 <h4>Retrouvez-nous sur les réseaux :</h4>
                 <div className="social_links">
-                  <a className="spacing_img_réseaux" href="#">
+                  <a className="spacing_img_réseaux" href="">
                     <img src={Facebook} alt="facebook" />
                   </a>
                   <a href="#">
                     <img src={Twitter_logo} alt="twitter" />
                   </a>
-                  <a className="spacing_img_réseaux" href="#">
+                  <a className="spacing_img_réseaux" href="">
                     <img src={Insta_logo} alt="instagram" />
                   </a>
                 </div>
