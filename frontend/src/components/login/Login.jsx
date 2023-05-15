@@ -1,6 +1,7 @@
 import "./login.css";
 import React, { useState } from "react";
-import axios from "axios";
+
+import { Link } from "react-router-dom";
 
 
 export default function Login() {
@@ -13,13 +14,19 @@ export default function Login() {
     setErrorMessage("");
   
     try {
-      const response = axios.post(
-        "http://localhost:5000/backend/authentification/register",
+      const response = await fetch(
+        "http://localhost:5000/backend/authentification/login",
         {
-          email,
-          password,
-        }
-      );
+      method : 'POST',
+      headers :{
+        'Content-Type' : 'application/json'
+      },
+      body:JSON.stringify({
+
+        email,
+        password,
+      }),
+      });
 
       if (response.ok) {
         window.location.replace("/"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
@@ -55,6 +62,9 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button class="button_login"type="submit">SE CONNECTER</button>
+          <p className="forgot-password">
+          Pas encore inscrit ? <Link to="/signup">Créer un compte </Link>
+          </p>
           </div>
         </form>
       </div>

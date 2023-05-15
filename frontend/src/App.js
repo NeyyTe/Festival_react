@@ -17,8 +17,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/"  element={<HomePage />} />
-      <Route path="*"  element={<HomePage />} /> 
-      {/* Renvoi par défaut a la homepage si l'url est incorrect */}
+      <Route path="*"  element={<HomePage />} /> {/* Renvoi par défaut a la homepage si l'url est incorrect */}    
       <Route path="/artistes"  element={<ArtistesPage />} />
       <Route path="/signup"  element={<SignupPage />} />
       <Route path="/login"  element={<LoginPage />} />

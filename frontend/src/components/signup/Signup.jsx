@@ -1,7 +1,6 @@
 import "./signup.css";
 import React, { useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
+
 import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
@@ -26,22 +25,30 @@ export default function Signup() {
     }
 
     try {
-      const response = await axios.post(
+      const response = await fetch(
         "http://localhost:5000/backend/authentification/register",
         {
-          fname,
-          email,
-          lname,
-          password,
-        }
-      );
+      method : 'POST',
+      headers :{
+        'Content-Type' : 'application/json'
+      },
+      body:JSON.stringify({
+        fname,
+        lname,
+        email,
+        password,
+      }),
+      });
 
-      // if (response.ok) {
-      //   window.location.replace("/"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
-      // }
+
+
       if (response.ok) {
-        navigate("/"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
+        window.location.href = "/login"; // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
       }
+
+      // if (res.ok) {
+      //   navigate("/login"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
+      // }
     } catch (error) {
       console.error(error);
       setError(true);
@@ -110,9 +117,7 @@ export default function Signup() {
               </span>
             )}
           </div>
-          <p className="forgot-password">
-            Déjà inscrit ? <Link to="/login">Se connecter </Link>
-          </p>
+          
         </form>
       </div>
     </div>

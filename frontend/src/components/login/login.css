@@ -11,7 +11,7 @@
 
 .container_login {
   width: 350px;
-  height: 500px;
+  height: 510px;
   border-radius: 20px;
   padding: 40px;
   box-sizing: border-box;
@@ -99,4 +99,17 @@ input {
 .button_login:focus {
   color: #000000;
   background-color: blueviolet;
+}
+
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding: 10px 0;
+  color: #7f7d7d;
+  margin: 0;
+}
+
+.forgot-password a {
+  color: #167bff;
 }

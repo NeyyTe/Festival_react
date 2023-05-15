@@ -28,7 +28,7 @@ function Header() {
         <li><NavLink to ="/tickets"><span className="span_links">Tickets</span><span className="icons">
           <DiscountTwoToneIcon fontSize="large"/>
         </span></NavLink></li>
-        <li><NavLink to ="/signup"><AccountCircleIcon fontSize="large"/></NavLink></li>
+        <li><NavLink to ="/login"><AccountCircleIcon fontSize="large"/></NavLink></li>
      </ul>
 
      <div className="menu">

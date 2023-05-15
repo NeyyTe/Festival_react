@@ -3,6 +3,9 @@ const router = express.Router();
 const userSchema = require("../models/user");
 const bcrypt = require("bcrypt");
 
+
+
+
 router.post("/register", async (req, res) => {
   try {
     const { fname, lname, email, password } = req.body;
@@ -20,7 +23,7 @@ router.post("/register", async (req, res) => {
       password: cryptedPassword,
     });
     const userSaved = await newUser.save();
-    return res.status(201).json({ message: "Utilisateur enregistré avec succès" });
+    return res.status(201).json({ message: "Votre compte enregistré avec succès" });
 
   } 
   
@@ -37,7 +40,7 @@ router.post("/login", async (req, res) => {
         return res.status(400).json("Vos identifiants sont incorrect");
         
       }
-      const passwordCompare = await bcrypt.compare(req.body.password,user.password);
+      const passwordCompare = await bcrypt.compare(password,user.password);
       if
       (!passwordCompare) { return res.status(400).json ("Mot de passe incorrect");
     }

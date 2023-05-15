@@ -11,7 +11,7 @@ if(document.querySelector('.containerClips'))
             this.linkClip = linkClip;
             this.srcVideo = srcVideo;
             this.views = views;
-            this.dateHour = dateHour;
+            this.dateHour = dateHour;     
             this.srcImageStreamer = srcImageStreamer;
             this.titleVideo = titleVideo;
             this.nameStreamer = nameStreamer;
