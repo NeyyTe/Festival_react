@@ -20,50 +20,47 @@
         MENU HAMBURGER
 ===========================*/
 
-
-@media all and (max-width:600px){
-  .nav_links li {
-    display: none;
+@media all and (max-width: 600px) {
+  .nav_links .menu {
+    display: flex;
   }
-  
-  .menu  {
+
+  .menu{
     display: block;
   }
 
-  .nav_links ul
-  {
-      width: 100%;
-      position: absolute;
-      left: 0;
-      flex-direction: column;
-     
+  .nav_links .icons{
+    display: none;
   }
 
-  .nav_links li
-  {
-      background-color: black;
-      width: 100%;
+   .span_links {
+    display: block;
+    position: relative;
   }
 
-  .nav_links li
-  {
-      display: none;
+  .nav_links ul {
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+  
   }
 
-  .nav_links li.active
-  {
-      display: block;
+  .nav_links li {
+    background-color: black;
+    width: 100%;
+    display: none;
+  
   }
 
-
-  .nav_links .menu
-  {
-      display: flex;
-  }
+  .nav_links li.active {
+    display: block;
+  
   }
 
   
-
+}
 
 /* ===========================
             HOME
@@ -76,16 +73,14 @@
 }
 
 @media all and (max-width: 990px) {
-    .main_container .right{
-        width: 70%;
-    }
-    
-  
-    
-    .right .main_title_right h1{
-        font-size: 1.8rem;
-    }
-    
+  .main_container .right {
+    width: 70%;
+  }
+
+  .right .main_title_right h1 {
+    font-size: 1.8rem;
+  }
+
   .right .premier_concert_rock {
     font-size: 1.1rem;
   }
@@ -99,29 +94,28 @@
     font-size: 1.5rem;
   }
 
-  .right .button_tickets{
+  .right .button_tickets {
     padding: 0.6rem 1.7rem;
   }
 }
 
 @media all and (max-width: 740px) {
-    .right .premier_concert_rock{
-        font-size: 1rem;
-        text-align: center;
-    }
+  .right .premier_concert_rock {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
-@media all and (max-width: 697px){
-    .right .location{
-        font-size: 2.5rem;
-    }
+@media all and (max-width: 697px) {
+  .right .location {
+    font-size: 2.5rem;
+  }
 
-    .right .date{
-        font-size: 1.2rem;
-    }
+  .right .date {
+    font-size: 1.2rem;
+  }
 
-    .right .button_tickets{
-        font-size: 1.1rem;
-    }
+  .right .button_tickets {
+    font-size: 1.1rem;
+  }
 }
-
