@@ -15,36 +15,35 @@
     justify-content: center;
   }
 }
+/* ===========================
+            HEADER
+===========================*/
 
 /* ===========================
         MENU HAMBURGER
 ===========================*/
 
 @media all and (max-width: 600px) {
- 
   .nav_links .menu {
     display: flex;
-    
   }
 
-  .menu{
+  .menu {
     display: block;
-   
   }
 
-  .nav_links .icons{
+  .nav_links .icons {
     display: none;
   }
 
-   .span_links {
+  .span_links {
     display: block;
     position: relative;
     text-align: center;
     padding: 20px 0;
   }
-  .nav_links li:nth-child(5){
+  .nav_links li:nth-child(5) {
     border-radius: 0px;
-   
   }
 
   .nav_links ul {
@@ -54,22 +53,22 @@
     left: 0;
     top: 0;
     flex-direction: column;
-
   }
 
   .nav_links li {
     background-color: black;
     width: 100%;
-   
-display: none;
 
+    display: none;
   }
- 
+
   .nav_links li.active {
     display: block;
-  
   }
 }
+/* ===========================
+        MENU HAMBURGER
+===========================*/
 
 /* ===========================
             HOME
@@ -128,3 +127,51 @@ display: none;
     font-size: 1.1rem;
   }
 }
+
+@media all and (max-width: 600px) {
+ .button_tickets .neon-button::before {
+   width: 0%;
+   height: 0%;
+  }
+}
+/* ===========================
+            HOME
+===========================*/
+
+/* ===========================
+     SECTION1_EXPERIENCE_INOUBLIABLES
+===========================*/
+@media all and (max-width:1049px) {
+  .section1_content:nth-of-type(2){
+  display: flex;
+  flex-direction: column-reverse;
+  }
+
+  .section1_content{
+    gap: 0;
+  }
+  .section1_experience ~ div{
+
+  }
+
+  .section1_text h3{
+    text-align: center;
+  }
+}
+
+
+
+
+
+/* ===========================
+            FOOTER
+===========================*/
+@media all and (max-width:696px) {
+  .footer .dog{
+    width: 400px;
+  }
+}
+
+/* ===========================
+            FOOTER
+===========================*/

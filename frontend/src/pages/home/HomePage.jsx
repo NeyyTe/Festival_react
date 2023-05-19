@@ -64,7 +64,7 @@ function HomePage() {
             <p>Vestiaires</p>
             <span>
               Rangez vos affaires en toute sécurité en utilisant nos vestiaires
-              dédiés
+             
             </span>
           </div>
 

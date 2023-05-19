@@ -13,17 +13,19 @@
 }
 
 .features {
-  width: 80%;
-
+  width: 100%;
+padding: 0 10%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+ 
   gap: 2rem;
   place-items: center;
 
-  margin: 0 auto;
+ 
 }
 
 .features_cards {
+ min-width: 330px;
   display: flex;
   flex-direction: column;
   padding: 20px;
