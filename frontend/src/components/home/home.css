@@ -28,7 +28,7 @@
   
     color: var(--txt_white);
     gap: 30px;
-    padding: 1rem;
+    padding: 1.5rem;
   }
   
   .left {
@@ -57,6 +57,7 @@
   }
 
   .logo_main{
+   
     transition: 0.3s;
   }
   .logo_main:hover{
@@ -67,7 +68,7 @@
   .main_title_right h1 {
     font-size: 3rem;
     font-family: "Cinzel Decorative", cursive;
-    
+
   }
   
   .premier_concert_rock {
@@ -83,6 +84,7 @@
     color: black;
     padding: 0.4em 2em;
     border-radius: 5px;
+    margin: 10px;
   }
   
   .location {
@@ -212,16 +214,4 @@
   }
   
 
-  @media all and (max-width:1284px){
-     .main_title_right h1{
-      font-size: 2.5rem ;
-    
-      text-align: center;
-    }
-  }
-
-  @media all and (max-width:955px){
-     .location {
-      font-size: 3rem;
-    }
-  }
+  

@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
 import logo2 from './images/logo2.png';
+import "../media_query/MediaQuery.css";
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
           </div>
 
           <div className="right">
-            <div><img className="logo_main"src={logo2} alt="" /></div>
+            <div><img className="logo_main"src={logo2} alt="Logo Les Nuits Secrètes" /></div>
             <div className="main_title_right">
               <h1>LES NUITS SECRÈTES</h1>
             </div>
@@ -26,13 +27,13 @@ function Home() {
               <p>Au Lycée Fénélon</p>
             </div>
             <div className="button_tickets">
-              <a className="neon-button" href="#">
+              <a className="neon-button" href="">
                 Acheter vos tickets !
               </a>
             </div>
 
             <div className="arroww bounce">
-              <a className="fa fa-arrow-down fa-2x" href="#"></a>
+              <a className="fa fa-arrow-down fa-2x" href=""></a>
             </div>
           </div>
         </div>

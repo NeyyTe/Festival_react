@@ -1,6 +1,8 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import './header.css';
+import "../media_query/MediaQuery.css";
 import { NavLink } from 'react-router-dom';
+// Icone Account 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 // Menu Hamburger icons
 import FormatAlignRightTwoToneIcon from '@mui/icons-material/FormatAlignRightTwoTone';
@@ -13,11 +15,31 @@ import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone'; //Infos
 import DiscountTwoToneIcon from '@mui/icons-material/DiscountTwoTone';// Tickets
 
 
+
+
 function Header() {
+  useEffect(() => {
+      const container = document.querySelector('.header');
+
+      if (container) {
+          const menu = document.querySelector('.menu');
+          const items = document.querySelectorAll('.nav_links ul li:not(:last-child)');
+
+          const handleClick = () => {
+              Array.from(menu.children).forEach(icon => icon.classList.toggle('active'));
+              items.forEach(item => item.classList.toggle('active'));
+          };
+
+          menu.addEventListener('click', handleClick);
+
+          return () => {
+              menu.removeEventListener('click', handleClick);
+          };
+      }
+  }, []);
   return (
   <>
   <header className="header">
-
 
 <nav className="nav_links">
     <ul>

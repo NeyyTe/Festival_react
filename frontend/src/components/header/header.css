@@ -102,10 +102,12 @@ header h1 {
 /* =================================================
                     Menu_Hamburger
 ================================================= */
+
 .menu {
+  
   position: absolute;
   top: 25px;
-  right: 65px;
+  right: 50px;
   justify-content: center;
   align-items: center;
   display: none;
@@ -113,8 +115,8 @@ header h1 {
 
 .menu .hamburger,
 .menu .close {
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height:50px;
   position: absolute;
   display: none;
 }
@@ -126,22 +128,6 @@ header h1 {
 
 .nav_links .icons {
   display: none;
-}
-
-
-@media all and (max-width: 920px){
-  .nav_links .icons {
-    display: block;
-}
-
-.span_links {
-  display: none;
-}
-
-.header{
-  justify-content: center;
- 
-}
 }
 /* =================================================
                     Menu_Hamburger
