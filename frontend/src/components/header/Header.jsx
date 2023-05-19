@@ -23,7 +23,7 @@ function Header() {
 
       if (container) {
           const menu = document.querySelector('.menu');
-          const items = document.querySelectorAll('.nav_links ul li:not(:last-child)');
+          const items = document.querySelectorAll('.nav_links ul li');
 
           const handleClick = () => {
               Array.from(menu.children).forEach(icon => icon.classList.toggle('active'));
@@ -50,7 +50,9 @@ function Header() {
         <li><NavLink to ="/tickets"><span className="span_links">Tickets</span><span className="icons">
           <DiscountTwoToneIcon fontSize="large"/>
         </span></NavLink></li>
-        <li><NavLink to ="/login"><AccountCircleIcon fontSize="large"/></NavLink></li>
+       
+        <li><NavLink to ="/login"><span className="span_links">Mon compte</span><span className="icons"><AccountCircleIcon fontSize="large"/>
+        </span></NavLink></li>
      </ul>
 
      <div className="menu">
