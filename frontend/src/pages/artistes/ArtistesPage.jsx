@@ -1,16 +1,194 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/header/Header";
 import "./artistesPage.css";
 import "./js.js";
 
-
-
 function Artistes() {
+  useEffect(() => {
+    const container = document.querySelector(".container");
+
+    if (container) {
+      const buttons = document.querySelectorAll(".buttonTabs button");
+      const sections = document.querySelectorAll(".contentTabs section");
+
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", () => {
+          if (!sections[i].classList.contains("activeTabs")) {
+            sections.forEach((section) => {
+              section.classList.remove("activeTabs");
+            });
+
+            sections[i].classList.add("activeTabs");
+          }
+        });
+      }
+
+      return () => {
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].removeEventListener("click", () => {
+            if (!sections[i].classList.contains("activeTabs")) {
+              sections.forEach((section) => {
+                section.classList.remove("activeTabs");
+              });
+
+              sections[i].classList.add("activeTabs");
+            }
+          });
+        }
+      };
+    }
+  }, []);
   return (
     <>
       <Header />
 
-     
+      <div className="container">
+        <main class="main">
+          <section class="buttonTabs">
+            <h1>Les Artistes</h1>
+            <button>Samedi</button>
+            <button>Dimanche</button>
+            <button>Lundi</button>
+          </section>
+          <div class="contentTabs">
+            <section id="Samedi" class="activeTabs">
+              <h2>Samedi</h2>
+              <div className="clips clipsWeekEnd activeTabs">
+                <a href="https://www.youtube.com" className="card">
+                  <img
+                    src="https://i.pinimg.com/736x/71/45/fa/7145fa77c73fe3421de13d4c0f1498a2.jpg"
+                    alt="david guetta"
+                  />
+
+                  <div className="desc">
+                    <div className="title">
+                      <h2>David Guetta</h2>
+                    </div>
+                    <div>
+                      <span>15/07/2023 à 15h00</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="https://www.youtube.com" className="card">
+                  <img
+                    src="https://img.lemde.fr/2019/07/26/0/0/5304/7952/664/0/75/0/619691a_x2lrCTmifjx801mbfTcMyd4n.jpg"
+                    alt="dj snake"
+                  />
+
+                  <div className="desc">
+                    <div className="title">
+                      <h2>Dj Snake</h2>
+                    </div>
+                    <div>
+                      <span>15/07/2023 à 16h00</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="https://www.youtube.com" className="card">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41soqdQyqOL.jpg"
+                    alt="ACDC"
+                  />
+
+                  <div className="desc">
+                    <div className="title">
+                      <h2>ACDC</h2>
+                    </div>
+                    <div>
+                      <span>15/07/2023 à 17h00</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="https://www.youtube.com" className="card">
+                  <img
+                    src="https://www.rollingstone.fr/wp-content/uploads/2021/12/james-brown-1980.jpg"
+                    alt="james brown"
+                  />
+
+                  <div className="desc">
+                    <div className="title">
+                      <h2>James Brown</h2>
+                    </div>
+                    <div>
+                      <span>15/07/2023 à 18h00</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://www.youtube.com" className="card">
+                  <img
+                    src="https://www.kuvo.org/wp-content/uploads/2020/05/STEVIE-WONDER.jpg"
+                    alt=""
+                  />
+
+                  <div className="desc">
+                    <div className="title">
+                      <h2>Stewie Wonder</h2>
+                    </div>
+                    <div>
+                      <span>15/07/2023 à 19h00</span>
+                    </div>
+                  </div>
+
+                  
+                </a>
+
+                <a href="https://www.youtube.com" className="card">
+                  <img
+                    src="https://images.mubicdn.net/images/cast_member/152113/cache-97268-1515719227/image-w856.jpg"
+                    alt=""
+                  />
+
+                  <div className="desc">
+                    <div className="title">
+                      <h2>Oasis</h2>
+                  
+                    </div>
+                    <div>
+                      <span>01/01/2022 à 03:00:00</span>
+                    </div>
+                  </div>
+
+                  
+                </a>
+              </div>
+
+            </section>
+
+            <section id="Dimanche">
+              <h2>Dimanche</h2>
+
+              <p>
+                Pour le ZEvent 2022, la Fondation de France assure la collecte
+                des dons et le reversement aux 4 associations bénéficiaires :
+                LPO, Sea Shepherd, The SeaCleaners et WWF.
+              </p>
+            </section>
+
+            <section id="seaShepherd">
+              <h2>Sea Shepherd</h2>
+              <a href="https://seashepherd.fr/" class="links site">
+                <span>Site</span>
+              </a>
+              <p>
+                Fondée en 1977 par le capitaine Paul Watson, SEA SHEPHERD est
+                l'ONG de défense des océans la plus combative au monde.
+              </p>
+              <p>
+                L'océan est un enjeu écologique majeur ; sa protection, un défi
+                particulièrement important notamment en France au regard de
+                l’énorme territoire maritime français, le deuxième plus vaste au
+                monde avec près de 11 millions de kilomètres carrés.
+              </p>
+              <video src="" controls></video>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      {/* 
       <div className="container containerClips">
            
 
@@ -35,6 +213,7 @@ function Artistes() {
                    <button className="buttonTabs">Dimanche</button>
                    <button className="buttonTabs">Lundi</button>
                </div>
+          
        
                <h1>Les plus vues</h1>
        
@@ -325,11 +504,9 @@ function Artistes() {
            </main>
            
        </div>
-
-
-
-</>
-  )
+ */}
+    </>
+  );
 }
 
-export default Artistes
+export default Artistes;

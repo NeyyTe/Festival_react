@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
 
-  background: rgb(19, 17, 54);
+  background: #131136;
   position: relative;
   padding: 3rem 0;
   padding-bottom: 10rem;
@@ -105,6 +105,7 @@ padding: 0 10%;
 
 .wave_separator .shape-fill {
   fill: #131136;
+  
 }
 /* =================================================
                 WAVE SEPARATOR
@@ -163,10 +164,7 @@ padding: 0 10%;
 }
 
 
-/* .section1_content img{
-  filter: drop-shadow(0 0 0.3rem rgb(70, 70, 70));
-  transition: 0.4s linear;
-} */
+
 
 /* =========================================================
                 SECTION 1 - Expérience inoubliable - END
