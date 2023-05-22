@@ -63,8 +63,8 @@ export default function Signup() {
           <h3>Inscrivez-vous</h3>
 
           <div className="input_wrapper">
-            <label>Prénom</label>
-            <input
+            <label className="label">Prénom</label>
+            <input className="input"
               type="text"
               placeholder="Entrez votre prénom.."
               onChange={(e) => setFname(e.target.value)}
@@ -72,8 +72,8 @@ export default function Signup() {
           </div>
 
           <div className="input_wrapper">
-            <label>Nom</label>
-            <input
+            <label className="label">Nom</label>
+            <input className="input"
               type="text"
               placeholder="Entrez votre nom.."
               onChange={(e) => setLname(e.target.value)}
@@ -81,16 +81,16 @@ export default function Signup() {
           </div>
 
           <div className="input_wrapper">
-            <label>Adresse E-mail</label>
-            <input
+            <label className="label">Adresse E-mail</label>
+            <input className="input"
               type="email"
               placeholder="Entrez votre e-mail.."
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="input_wrapper">
-            <label>Confirmer l'adresse mail</label>
-            <input
+            <label className="label">Confirmer l'adresse mail</label>
+            <input className="input"
               value={ConfirmEmail}
               type="email"
               placeholder="Entrez votre e-mail.."
@@ -99,8 +99,8 @@ export default function Signup() {
           </div>
 
           <div className="input_wrapper">
-            <label>Mot de passe</label>
-            <input
+            <label className="label">Mot de passe</label>
+            <input className="input"
               type="password"
               placeholder="Entrez votre mot de passe.."
               onChange={(e) => setPassword(e.target.value)}

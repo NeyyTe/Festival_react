@@ -97,18 +97,18 @@ function Header() {
               <li>
                 <Link onClick={handleLogout}>Deconnexion</Link>
               </li>
-           ) }
+            )}
 
-{!isLoggedIn && (
-            <li>
-              <NavLink to="/login">
-                <span className="span_links">Mon compte</span>
-                <span className="icons">
-                  <AccountCircleIcon fontSize="large" />
-                </span>
-              </NavLink>
-            </li>
-)}
+            {!isLoggedIn && (
+              <li>
+                <NavLink to="/login">
+                  <span className="span_links">Mon compte</span>
+                  <span className="icons">
+                    <AccountCircleIcon fontSize="large" />
+                  </span>
+                </NavLink>
+              </li>
+            )}
           </ul>
 
           <div className="menu">

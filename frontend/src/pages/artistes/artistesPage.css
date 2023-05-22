@@ -1,17 +1,3 @@
-/* Global */
-
-
-.containerClips header
-{
-    grid-area: 1 / 1 / 2 / 3;
-    position: fixed;
-}
-
-.containerClips main
-{
-    grid-area: 2 / 2 / 3 / 3;
-    padding: 40px 10px 0;
-}
 
 /* Clips Filter  */
 
@@ -45,6 +31,10 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+.buttonTabs h1{
+    color: white;
 }
 
 .filterClips .buttonSlideBar
@@ -101,9 +91,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     justify-content: space-between;
-    place-items: ce;
+
     width: 100%;
     gap: 20px;
+    padding: 0 5%;
 }
 
 .clips
@@ -215,8 +206,10 @@
     line-height: 1.5;
     padding-bottom: 20px;
 }
-
+Z
 /* Buttons Tabs */
+
+
 
 .main .buttonTabs
 {
@@ -226,12 +219,13 @@
 .main .buttonTabs button
 {
     
-    background-color: rgb(19, 12, 87);
+    background-color: rgb(53, 37, 198);
     min-width: 75px;
     height: 40px;
     margin: 5px;
     padding: 0 5px;
-    color: green;
+    color: var(--txt_white);
+    border: none;
   
     border-radius: 5px;
     -webkit-border-radius: 5px;
