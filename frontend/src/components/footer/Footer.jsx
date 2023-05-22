@@ -51,7 +51,7 @@ function Footer() {
                   <a className="spacing_img_réseaux" href="">
                     <img src={Facebook} alt="facebook" />
                   </a>
-                  <a href="#">
+                  <a href="">
                     <img src={Twitter_logo} alt="twitter" />
                   </a>
                   <a className="spacing_img_réseaux" href="">

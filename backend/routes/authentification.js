@@ -6,6 +6,8 @@ const jwt = require("jsonwebtoken");
 const timeToken = 2*14*60*60; // Durée de validité du token
 const createToken = (id) => {return jwt.sign({id},"secret_key",{expiresIn : timeToken})}; // Génère un JWT en utilisant l'identifiant, une clé secrète ("secret_key") et la durée de validité définie précédemment
 
+
+
 router.post("/register", async (req, res) => {
   try {
     const { fname, lname, email, password } = req.body;
@@ -32,27 +34,33 @@ router.post("/register", async (req, res) => {
   }
 });
 
+
+
+
+// ...
+
 router.post("/login", async (req, res) => {
-    try {
-      const { email, password } = req.body;
-      const user = await userSchema.findOne({ email });
-      if (!user) {
-        return res.status(400).json("Vos identifiants sont incorrects");
-        
-      }
-      const passwordCompare = await bcrypt.compare(password,user.password);
-      if
-      (!passwordCompare) { return res.status(400).json ("Mot de passe incorrect");
+  try {
+    const { email, password } = req.body;
+    const user = await userSchema.findOne({ email });
+    if (!user) {
+      return res.status(400).json("Vos identifiants sont incorrects");
+    }
+    const passwordCompare = await bcrypt.compare(password, user.password);
+    if (!passwordCompare) {
+      return res.status(400).json("Mot de passe incorrect");
     }
 
-    const token = createToken (user._id);
-    
-      const {Password, ...others} = user._doc;
-      res.status (200).json ({others,token:token});
-    }
-    catch(err){
-        res.status(500).json(err); 
-    }
-}); 
+    const token = createToken(user._id);
+
+    const { password: userPassword, ...userWithoutPassword } = user._doc;
+    res.status(200).json({user: user, token: token });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// ...
+
 
 module.exports = router;
