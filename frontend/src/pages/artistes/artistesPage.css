@@ -1,93 +1,18 @@
 
-/* Clips Filter  */
 
-.filterClips
-{
-    background-color: var(--networksPrimary);
-    width: 95%;
-    min-height: 70px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 5px 15px;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-}
-
-.filterClips .buttonTabs
-{
-    background-color: transparent;
-    color: var(--txt_white);
-    font-weight: bold;
-    border: none;
-    height: 50px;
-    margin: 5px;
-    font-size: 0.9em;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-
-.buttonTabs h1{
+.buttonTabs h1 {
     color: white;
 }
 
-.filterClips .buttonSlideBar
-{
-    background-color: transparent;
-    max-width: 75px;
-    border: none;
-    border-right: 1px solid rgba(255,255,255,0.5);
-    padding-right: 15px;
-    margin-right: 15px;
-    display: none;
-}
 
-.containerClips .buttonTabs.activeClips
-{
+.containerClips .buttonTabs.activeClips {
     background-color: var(--secondaryColor);
     text-shadow: 0px 0px 2px #000;
 }
 
-
-
-/* Pagination */
-
-.pagination
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 20px 0 40px;
-}
-
-.pagination button
-{
-    background-color: var(--networksPrimary);
-    color: var(--thirdColor);
-    width: 50px;
-    height: 50px;
-    font-weight: bold;
-    border: none;
-    filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.2));
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    -webkit-filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.2));
-}
-
 /* Clips */
 
-.clips 
-{
+.clips {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     justify-content: space-between;
@@ -97,20 +22,17 @@
     padding: 0 5%;
 }
 
-.clips
-{
+.clips {
     display: none;
 }
 
-.clips.activeTabs
-{
+.clips.activeTabs {
     display: grid;
 }
 
 /* Cards */
 
-.card
-{
+.card {
     min-width: 260px;
     min-height: 350px;
     padding: 0 0 10px;
@@ -124,31 +46,16 @@
     background-color: var(--networksPrimary);
 }
 
-.card:hover
-{
+.card:hover {
     background-color: var(--secondaryColor);
     color: var(--networksPrimary);
     box-shadow: 0 0 5px var(--secondaryColor);
 }
 
-/* Video */
-
-/* .card video
-{
-    width: 100%;
-    height: 200px;
-    padding: 0;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-} */
 
 /* Description */
 
-.card .desc
-{
+.card .desc {
     width: 100%;
     padding: 5px 0px 10px;
     display: flex;
@@ -156,8 +63,7 @@
 }
 
 
-.card img
-{
+.card img {
     width: 100%;
     height: 380px;
     object-fit: cover;
@@ -170,16 +76,20 @@
     -o-border-radius: 5px;
 }
 
-.card h2
-{
+.card h2 {
     font-size: 1.2em;
     text-align: start;
 }
 
-.title{
-  margin: 5px 0;
-  margin-top: 15px;
+.title {
+    margin: 5px 0;
+    margin-top: 15px;
     color: rgb(255, 255, 255)
+}
+
+.activeTabs > h2{
+    color: white;
+   margin: 0 6rem 1rem;
 }
 
 
@@ -187,62 +97,84 @@
 
 
 
+.container {
+    background-color: var(--blue);
 
-
-.container{
-    background-color:var(--blue);
-    min-height: 100dvh;
     overflow: hidden;
+
+}
+
+.main_artistes {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .desc span {
     color: rgb(136, 136, 136);
 }
 
-.contentTabs
-{
+.contentTabs {
     width: 100%;
     text-align: justify;
     line-height: 1.5;
     padding-bottom: 20px;
 }
+
 Z
 /* Buttons Tabs */
 
 
-
-.main .buttonTabs
-{
+.main .buttonTabs {
     text-align: center;
 }
 
-.main .buttonTabs button
-{
+.buttons_jours {
+    text-align: center;
+    margin-top: 30px ;
     
-    background-color: rgb(53, 37, 198);
-    min-width: 75px;
-    height: 40px;
-    margin: 5px;
-    padding: 0 5px;
-    color: var(--txt_white);
-    border: none;
+
+}
+
+.main_artistes .buttons_jours button {
+  background-color: rgb(53, 37, 198);
+  min-width: 75px;
+  height: 40px;
+  margin: 5px;
+  padding: 0 10px;
+  color: var(--txt_white);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+}
+
+  .main_artistes .buttons_jours button:hover{
+    outline: 1px solid violet;
+   
+  }
+
+
+.buttonTabs h1 {
+    text-align: center;
+margin-bottom: 20px;
+
 }
 
 /* Tabs */
 
-.contentTabs
-{
+.contentTabs {
     width: 100%;
 }
 
-.contentTabs section
-{
+.contentTabs section {
     display: none;
     width: 100%;
     min-width: 260px;
@@ -250,14 +182,6 @@ Z
 
 }
 
-.contentTabs section.activeTabs
-{
+.contentTabs section.activeTabs {
     display: block;
 }
-
-
-
-
-
-
-

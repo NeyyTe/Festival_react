@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Header from "../../components/header/Header";
+import Header from "../../components/header/Header.jsx";
 import "./artistesPage.css";
 import "./js.js";
 
@@ -38,21 +38,20 @@ function Artistes() {
       };
     }
   }, []);
-  useEffect(() => {
-    let className = ""
-  })
-
+  
   return (
     <>
       <Header />
 
       <div className="container">
-        <main class="main">
-          <section class="buttonTabs">
+        <main className="main_artistes">
+          <section className="buttonTabs">
             <h1>Les Artistes</h1>
-            <button>Samedi</button>
-            <button>Dimanche</button>
-            <button>Lundi</button>
+            <div className="buttons_jours">
+              <button>Samedi</button>
+              <button>Dimanche</button>
+              <button>Lundi</button>
+            </div>
           </section>
 
           <div class="contentTabs">
@@ -130,7 +129,7 @@ function Artistes() {
                   />
                   <div className="desc">
                     <div className="title">
-                      <h2>Stewie Wonder</h2>
+                      <h2>Stevie Wonder</h2>
                     </div>
                     <div>
                       <span>15/07/2023 à 19h00</span>

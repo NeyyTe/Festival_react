@@ -18,6 +18,7 @@ function Header() {
   // const isLoggedIn = () => {
   //   return localStorage.getItem("isLoggedIn") === "true";
   // };
+
   const isLoggedIn = localStorage.getItem("token");
 
   const handleLogout = () => {
