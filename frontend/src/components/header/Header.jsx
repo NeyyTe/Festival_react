@@ -69,14 +69,7 @@ function Header() {
                 </span>
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/programmation">
-                <span className="span_links">Programmation </span>
-                <span className="icons">
-                  <BrowseGalleryTwoToneIcon fontSize="large" />
-                </span>
-              </NavLink>{" "}
-            </li>
+            
             <li>
               <NavLink to="/infos">
                 <span className="span_links">Infos</span>{" "}

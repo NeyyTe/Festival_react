@@ -157,24 +157,24 @@ Z
 
 .buttonTabs h1::before,
 .buttonTabs h1::after {
---margin : -100px
+
   content: "";
   position: absolute;
   height: 30px;
   width: 90px;
-top: 25%;
+top: 28%;
 }
 .buttonTabs h1::after {
   content: "";
   background: url(./images/Flamme_orange_droite.svg) no-repeat;
   background-size: contain;
-margin-left:30px;
+margin-left:25px;
 }
 .buttonTabs h1::before {
   content: "";
   background: url(./images/Flamme_orange_gauche.svg) no-repeat;
   background-size: contain;
-margin-left: -130px;
+margin-left: -120px;
 }
 
 
