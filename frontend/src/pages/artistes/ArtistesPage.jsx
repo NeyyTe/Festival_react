@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../../components/header/Header.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 import "./artistesPage.css";
 import "./js.js";
 
@@ -633,6 +634,7 @@ function Artistes() {
           </div>
         </main>
       </div>
+      <Footer/>
     </>
   );
 }

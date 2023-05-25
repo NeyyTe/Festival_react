@@ -6,7 +6,7 @@ import ArtistesPage from './pages/artistes/ArtistesPage';
 import SignupPage from "./pages/signup/SignupPage";
 import LoginPage from "./pages/login/LoginPage";
 import TicketsPage from "./pages/tickets/TicketsPage";
-
+import CommandesPage from "./pages/commandes/CommandesPage"
 
 
 
@@ -23,6 +23,7 @@ function App() {
       <Route path="/signup"  element={<SignupPage />} />
       <Route path="/login"  element={<LoginPage />} />
       <Route path="/tickets"  element={<TicketsPage />} />
+      <Route path="/commandes"  element={<CommandesPage />} />
 
       
     </Routes>

@@ -1,0 +1,21 @@
+.form_wrapper{
+    min-height: 100dvh;
+    background-color: var(--blue);
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_wrapper h2{
+    color: var(--gold);
+}
+.form label{
+    color: white;
+}

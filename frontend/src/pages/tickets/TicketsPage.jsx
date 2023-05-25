@@ -1,6 +1,7 @@
 import React from "react";
 import "./tickets.css";
 import Header from "../../components/header/Header.jsx";
+import { Link } from "react-router-dom";
 
 
 
@@ -33,9 +34,9 @@ function TicketsPage() {
                   <li>1 goodie offert</li>
                 </ul>
               </div>
-              <a href="https://codepen.io/collection/XdWJOQ/" className="btnn">
+              <Link to ="/commandes" className="btnn">
                 Commander maintenant
-              </a>
+              </Link>
             </div>
           
 
@@ -56,9 +57,9 @@ function TicketsPage() {
                   <li>1 goodie + 15 tokens offert</li>
                 </ul>
               </div>
-              <a href="https://codepen.io/collection/XdWJOQ/" className="btnn">
+              <Link to ="/commandes" className="btnn">
                 Commander maintenant
-              </a>
+              </Link>
             </div>
 
             <div className="box">
@@ -78,9 +79,9 @@ function TicketsPage() {
                   <li>Buffet et boissons à volonté</li>
                 </ul>
               </div>
-              <a href="https://codepen.io/collection/XdWJOQ/" className="btnn">
+              <Link to ="/commandes" className="btnn">
                 Commander maintenant
-              </a>
+              </Link>
             </div>
           </div>
         </section>
