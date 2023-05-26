@@ -11,6 +11,7 @@ import CommandesPage from "./pages/commandes/CommandesPage"
 
 
 
+
 function App() {
   return (
     <>
@@ -24,7 +25,6 @@ function App() {
       <Route path="/login"  element={<LoginPage />} />
       <Route path="/tickets"  element={<TicketsPage />} />
       <Route path="/commandes"  element={<CommandesPage />} />
-
       
     </Routes>
   </BrowserRouter>

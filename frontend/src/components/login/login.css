@@ -75,7 +75,8 @@
   height: 50px;
   font-size: 14px;
   border-radius: 50px;
-  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff73;
+  box-shadow: inset 5px 5px 5px #cacaca,
+            inset -5px -5px 10px #f6f6f6;
 }
 
 .button_login {
@@ -91,7 +92,7 @@
 }
 
 .button_login:hover {
-  background-color: rgb(183, 106, 255);
+  /* background-color: rgb(183, 106, 255); */
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #21202073;
   transition: 0.2s ease-in-out;
 }
