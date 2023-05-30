@@ -1,7 +1,7 @@
 .container_wrapper {
   width: 100vw;
   height: 100vh;
-  background: #dde1e7;
+  background: #131136;
 
   display: flex;
   align-items: center;
@@ -10,13 +10,14 @@
 }
 
 .container_login {
-  width: 350px;
-  height: 510px;
+  width: 500px;
+  height: mincontent;
   border-radius: 20px;
   padding: 40px;
   box-sizing: border-box;
-  background: #dde1e7;
-  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+  background: #131136;
+  box-shadow:  8px 8px 16px #0f0d2a,
+  -8px -8px 16px #171542;
 }
 
 .brand-logo {
@@ -26,7 +27,8 @@
   margin: auto;
   border-radius: 50%;
   box-sizing: border-box;
-  box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+  box-shadow:  15px 12px 20px #0a091d,
+  -15px -15px 31px #1c194f;
   object-fit: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -42,7 +44,7 @@
 
 .inputs {
   text-align: left;
-  margin-top: 30px;
+  margin: 30px 0;
 }
 
 .label,
@@ -57,7 +59,8 @@
 }
 
 .label {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
+  color: white;
 }
 
 .label:nth-of-type(2) {
@@ -81,19 +84,21 @@
 
 .button_login {
   color: white;
-  margin-top: 20px;
+ 
+  margin: 30px 0;
   background: var(--clr-neon);
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
   font-weight: 900;
-  box-shadow: 2px 2px 6px #cbced1, -6px -6px 6px white;
+
   transition: 0.2s;
 }
 
 .button_login:hover {
   /* background-color: rgb(183, 106, 255); */
-  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #21202073;
+  box-shadow: inset 10px 10px 21px #461673,
+  inset -10px -10px 21px #ce40ff;
   transition: 0.2s ease-in-out;
 }
 

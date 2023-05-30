@@ -140,7 +140,7 @@ Z
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  box-shadow:  5px 5px 10px #080716,  -5px -5px 10px #1e1b56;
+ transition: 0.1s;
 
 }
 

@@ -60,12 +60,16 @@ export default function Login() {
               type="email"
               placeholder="email@exemple.com"
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <label className="label">Mot de passe</label>
             <input
               className="input"
               type="password"
               placeholder="Minimum de 6 lettres"
+              minlength="6"
+              required
+              autocomplete="current-password"
               onChange={(e) => setPassword(e.target.value)}
             />
             <button className="button_login" type="submit">
