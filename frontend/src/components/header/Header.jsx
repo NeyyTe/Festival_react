@@ -10,7 +10,6 @@ import CancelTwoToneIcon from "@mui/icons-material/CancelTwoTone";
 //Menu icons navbar pour responsive
 import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone"; //Accueil
 import PeopleAltTwoToneIcon from "@mui/icons-material/PeopleAltTwoTone"; //Artistes
-import BrowseGalleryTwoToneIcon from "@mui/icons-material/BrowseGalleryTwoTone"; //Programmation
 import InfoTwoToneIcon from "@mui/icons-material/InfoTwoTone"; //Infos
 import DiscountTwoToneIcon from "@mui/icons-material/DiscountTwoTone"; // Tickets
 
@@ -71,8 +70,8 @@ function Header() {
             </li>
             
             <li>
-              <NavLink to="/infos">
-                <span className="span_links">Infos</span>{" "}
+              <NavLink to="/faq">
+                <span className="span_links">FAQ</span>{" "}
                 <span className="icons">
                   <InfoTwoToneIcon fontSize="large" />
                 </span>

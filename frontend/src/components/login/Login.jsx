@@ -67,9 +67,9 @@ export default function Login() {
               className="input"
               type="password"
               placeholder="Minimum de 6 lettres"
-              minlength="6"
+              minLength="6"
               required
-              autocomplete="current-password"
+              autoComplete="current-password"
               onChange={(e) => setPassword(e.target.value)}
             />
             <button className="button_login" type="submit">

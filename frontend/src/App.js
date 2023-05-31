@@ -1,12 +1,14 @@
 
 import React from "react";
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
 import HomePage from "./pages/home/HomePage";
 import ArtistesPage from './pages/artistes/ArtistesPage';
 import SignupPage from "./pages/signup/SignupPage";
 import LoginPage from "./pages/login/LoginPage";
 import TicketsPage from "./pages/tickets/TicketsPage";
 import CommandesPage from "./pages/commandes/CommandesPage"
+import FaqPage from "./pages/faq/FaqPage";
 
 
 
@@ -25,6 +27,7 @@ function App() {
       <Route path="/login"  element={<LoginPage />} />
       <Route path="/tickets"  element={<TicketsPage />} />
       <Route path="/commandes"  element={<CommandesPage />} />
+      <Route path="/faq"  element={<FaqPage />} />
       
     </Routes>
   </BrowserRouter>

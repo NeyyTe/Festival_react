@@ -1,0 +1,169 @@
+/* .faq_wrapper{
+    min-height: 100dvh;
+   background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, #131136 97.5% );
+ padding: 7rem 0;
+ 
+}
+
+.faq_wrapper h1{
+    color: var(--gold);
+}
+
+.faq_inner{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 70%;
+    max-width: 700px;
+    min-width: 280px;
+    min-height: 700px;
+    margin: 0 auto 20px;
+    padding: 0 10px;
+}
+
+details{
+    color: var(--txt_white);
+    width: 100%;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+ */
+
+.main_faq{
+    min-height: 100dvh;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%,#131136 97.5% );
+    padding: 6rem 0;
+}
+
+
+ .faq_wrapper
+{
+    width: 70%;
+    max-width: 700px;
+    min-width: 280px;
+    min-height: 700px;
+    margin: 0 auto 20px;
+    padding: 0 10px;
+    
+}
+
+.faq_wrapper h2{
+    color: var(--gold);
+    text-align: center;
+}
+
+.content
+{
+    width: 100%;
+    display: flex;
+   
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.content > h3{
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.details
+{
+    width: 100%;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0 auto;
+    color: white;
+   font-family: poppins;
+   transition: 0.3s;
+}
+
+details
+{
+    width: 100%;
+    border: 1px solid rgb(189, 143, 143);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: black;
+    transition: all 0.3s;
+}
+
+details[open] summary ~ * {
+   
+    animation: sweep .5s ease-in-out;
+  }
+  
+  @keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+  }
+
+summary
+{
+    width: 100%;
+    padding: 10px 0 10px 35px;
+ 
+    list-style-type: none; 
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+   position: relative;
+}
+
+summary::before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+  }
+
+  details[open] > summary::before {
+    transform: rotate(90deg);
+  }
+
+details p
+{
+    padding: 1rem;
+    line-height: 1.5;
+    color: rgb(204, 204, 204);
+}
+
+.details a
+{
+    display: inline-flex;
+    align-items: center;
+}
+
+details ~ a
+{
+    margin-top: 10px;
+}
+
+.details img 
+{
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+

@@ -1,6 +1,6 @@
 .container_wrapper {
-  width: 100vw;
-  height: 100vh;
+  
+  height: 100dvh;
   background: #131136;
 
   display: flex;
@@ -16,8 +16,8 @@
   padding: 40px;
   box-sizing: border-box;
   background: #131136;
-  box-shadow:  8px 8px 16px #0f0d2a,
-  -8px -8px 16px #171542;
+  box-shadow:  5px 5px 10px #09081a,
+  -5px -5px 10px #1d1a52;
 }
 
 .brand-logo {
