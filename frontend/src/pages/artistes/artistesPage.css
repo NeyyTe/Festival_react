@@ -113,7 +113,7 @@ word-break: break-word;
   color: rgb(136, 136, 136);
 }
 
-Z
+
 /* Buttons Tabs */
 
 
@@ -144,8 +144,8 @@ Z
 }
 
 .main_artistes .buttons_jours button:hover {
-  /*outline: 1px solid violet;
-  */box-shadow: inset 5px 5px 10px #2b0f5f,  inset -5px -5px 10px #47199b;
+  
+  box-shadow: inset 5px 5px 10px #2b0f5f,  inset -5px -5px 10px #47199b;
 
 }
 
@@ -184,7 +184,7 @@ Z
   width: 100%;
   text-align: justify;
   line-height: 1.5;
-  padding-bottom: 20px;
+ 
 }
 
 .contentTabs section {
@@ -196,4 +196,25 @@ Z
 
 .contentTabs section.activeTabs {
   display: block;
+}
+
+.cta_wrapper{
+  margin-top: 50px;
+  text-align: center;
+  
+}
+
+.tickets_cta{
+  
+  color: white;
+  padding: 0.75rem 1.5rem;
+  background-image: linear-gradient(to right, #ab7b1b, #8646c5, #c5932d, #8E37D7);
+  background-size: 300% 100%;
+	transition: all .4s ease-in-out;
+  border-radius: 10px;
+	font-size: 1.3rem;
+}
+
+.tickets_cta:hover{
+  background-position: 100% 0;
 }

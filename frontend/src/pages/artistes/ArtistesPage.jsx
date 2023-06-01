@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
+import { Link } from "react-router-dom";
 import Header from "../../components/header/Header.jsx";
 import Footer from "../../components/footer/Footer.jsx";
 import "./artistesPage.css";
-import "./js.js";
 
 function Artistes() {
   useEffect(() => {
@@ -76,7 +76,6 @@ function Artistes() {
                   </div>
                 </a>
 
-                
                 <a href="https://www.youtube.com" className="card">
                   <img
                     src="https://img.nrj.fr/oKb2HGWAOCPA6-dP8lPgGZSOaQo=/800x450/smart/medias%2F2022%2F10%2F633fd2895c870_633fd291f3b15.jpg"
@@ -335,10 +334,6 @@ function Artistes() {
                     </div>
                   </div>
                 </a>
-
-              
-
-        
               </div>
             </section>
             <section id="Samedi">
@@ -631,10 +626,14 @@ function Artistes() {
                 </a>
               </div>
             </section>
+      <div className="cta_wrapper">
+        <Link to="/tickets" className="tickets_cta">Voir tout les tickets</Link>
+      </div>
           </div>
+            
         </main>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

@@ -14,9 +14,6 @@ import InfoTwoToneIcon from "@mui/icons-material/InfoTwoTone"; //Infos
 import DiscountTwoToneIcon from "@mui/icons-material/DiscountTwoTone"; // Tickets
 
 function Header() {
-  // const isLoggedIn = () => {
-  //   return localStorage.getItem("isLoggedIn") === "true";
-  // };
 
   const isLoggedIn = localStorage.getItem("token");
 
@@ -113,7 +110,7 @@ function Header() {
             </span>
           </div>
         </nav>
-        {/* <!-- <a href="#" class="cta_tickets">Tickets</a> --> */}
+     
       </header>
     </>
   );

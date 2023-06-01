@@ -7,8 +7,6 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -51,9 +49,8 @@ export default function Login() {
           {errorMessage && <p>{errorMessage}</p>}
           <div className="brand-logo"></div>
           <div className="brand-title">Les Nuits Secrètes</div>
-          
+
           <div className="inputs">
-            
             <label className="label">E-mail</label>
             <input
               className="input"
@@ -78,7 +75,6 @@ export default function Login() {
             <p className="forgot-password">
               Pas encore inscrit ? <Link to="/signup">Créer un compte </Link>
             </p>
-           
           </div>
         </form>
       </div>
