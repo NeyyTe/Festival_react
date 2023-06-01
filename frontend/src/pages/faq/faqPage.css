@@ -1,43 +1,9 @@
-/* .faq_wrapper{
-    min-height: 100dvh;
-   background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, #131136 97.5% );
- padding: 7rem 0;
- 
-}
 
-.faq_wrapper h1{
-    color: var(--gold);
-}
-
-.faq_inner{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 70%;
-    max-width: 700px;
-    min-width: 280px;
-    min-height: 700px;
-    margin: 0 auto 20px;
-    padding: 0 10px;
-}
-
-details{
-    color: var(--txt_white);
-    width: 100%;
-    min-width: 260px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
- */
 
 .main_faq{
     min-height: 100dvh;
     background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%,#131136 97.5% );
-    padding: 6rem 0;
+    padding: 7rem 0;
 }
 
 
@@ -57,6 +23,28 @@ details{
     text-align: center;
 }
 
+.faq_wrapper h2::before,
+.faq_wrapper h2::after{
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 90px;
+    top: 14%;
+}
+
+.faq_wrapper h2::after {
+    content: "";
+    background: url(./images/Flamme_orange_droite.svg) no-repeat;
+    background-size: contain;
+    margin-left: 25px;
+  }
+  .faq_wrapper h2::before {
+    content: "";
+    background: url(./images/Flamme_orange_gauche.svg) no-repeat;
+    background-size: contain;
+    margin-left: -120px;
+  }
+
 .content
 {
     width: 100%;
@@ -64,13 +52,13 @@ details{
    
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 2rem;
+   
 }
 
-.content > h3{
+.content h3{
     color: white;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    margin: 2rem 0;
+    font-size: 1.5rem;
 }
 
 .details
@@ -79,7 +67,7 @@ details{
     min-width: 260px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     margin: 0 auto;
     color: white;
    font-family: poppins;
@@ -143,7 +131,8 @@ summary::before {
 
 details p
 {
-    padding: 1rem;
+    
+    padding: 0.6rem 1rem ;
     line-height: 1.5;
     color: rgb(204, 204, 204);
 }
@@ -164,6 +153,11 @@ details ~ a
     margin-left: 5px;
     width: 20px;
     height: 20px;
+}
+
+details span{
+    font-weight: 600;
+    color: white;
 }
 
 
