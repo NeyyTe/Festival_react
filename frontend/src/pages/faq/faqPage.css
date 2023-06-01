@@ -4,8 +4,22 @@
     min-height: 100dvh;
     background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%,#131136 97.5% );
     padding: 7rem 0;
+    position: relative;
+}
+.tiger{
+    background: url(./images/tigerhome.svg)no-repeat;
+    position: fixed;
+    height: 504px;
+    top: 25%;
+  right: -15%;
+    width: 450px;
+    transform: scaleX(-1);
+transition: 1s ease-in-out;
 }
 
+.tiger:hover{
+    right: 3%;
+}
 
  .faq_wrapper
 {
@@ -21,6 +35,7 @@
 .faq_wrapper h2{
     color: var(--gold);
     text-align: center;
+    position: relative;
 }
 
 .faq_wrapper h2::before,
@@ -29,7 +44,7 @@
     position: absolute;
     height: 30px;
     width: 90px;
-    top: 14%;
+    top: 24%;
 }
 
 .faq_wrapper h2::after {

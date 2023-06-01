@@ -9,7 +9,7 @@ import LoginPage from "./pages/login/LoginPage";
 import TicketsPage from "./pages/tickets/TicketsPage";
 import CommandesPage from "./pages/commandes/CommandesPage"
 import FaqPage from "./pages/faq/FaqPage";
-
+import AdminPage from "./pages/admin/AdminPage";
 
 
 
@@ -28,6 +28,7 @@ function App() {
       <Route path="/tickets"  element={<TicketsPage />} />
       <Route path="/commandes"  element={<CommandesPage />} />
       <Route path="/faq"  element={<FaqPage />} />
+      <Route path="/admin"  element={<AdminPage />} />
       
     </Routes>
   </BrowserRouter>

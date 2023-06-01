@@ -32,7 +32,7 @@ padding: 0 10%;
   color: var(--txt_white);
 
   transition: 0.3s ease-in-out;
-  box-shadow: 5px 5px 20px rgb(29, 29, 29);
+  box-shadow: 5px 5px 15px  rgb(0, 0, 0);
 }
 
 .features_cards:hover {
@@ -94,13 +94,14 @@ padding: 0 10%;
   width: 100%;
   overflow: hidden;
   line-height: 0;
+ 
 }
 
 .wave_separator svg {
   position: absolute;
   display: block;
   width: calc(100% + 1.3px);
-  height: 72px;
+  height: 72px; 
 }
 
 .wave_separator .shape-fill {
@@ -119,6 +120,7 @@ padding: 0 10%;
 .section1_experience {
   padding-top: 5rem;
   background-color: rgb(255, 255, 255);
+  z-index: 20;
 }
 
 .section1_experience h2 {
@@ -202,3 +204,5 @@ object-fit: cover;
 /* =========================================================
                         BANNER SPONSORS END
 ============================================================ */
+
+

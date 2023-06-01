@@ -35,7 +35,7 @@ function CommandesPage() {
             <label className="label"> Nombre de billets :</label>
              
               <input className="input"
-                min="0"
+                min="1"
                 type="number"
                 name="numberOfTickets"
                 value={ticketData.numberOfTickets}

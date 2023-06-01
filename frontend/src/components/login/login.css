@@ -61,6 +61,7 @@
 .label {
   margin-bottom: 10px;
   color: white;
+  font-family: poppins;
 }
 
 .label:nth-of-type(2) {

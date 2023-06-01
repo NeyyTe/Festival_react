@@ -19,6 +19,7 @@ export default function SimpleAccordion() {
       </section> */}
 
       <main className="main_faq">
+        <div className="tiger"></div>
         <section className="faq_wrapper">
           <h2>Foire Aux Questions</h2>
 

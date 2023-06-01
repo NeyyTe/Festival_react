@@ -36,6 +36,7 @@ function HomePage() {
       <Slider />
 
       <div className="features_wrapper">
+       
         <div className="features">
           <div className="features_cards">
             <div>
@@ -81,6 +82,8 @@ function HomePage() {
             Plus d'informations
           </a>
         </div>
+.
+
       </div>
 
       <div class="wave_separator">
