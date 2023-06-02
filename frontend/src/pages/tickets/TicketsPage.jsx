@@ -2,11 +2,11 @@ import React from "react";
 import "./tickets.css";
 import Header from "../../components/header/Header.jsx";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 
 
-
-function TicketsPage() {
+function TicketsPage({ price, date, onDelete }) {
   return (
     <>
     

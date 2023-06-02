@@ -1,0 +1,10 @@
+.admin_wrapper{
+    width: 100%;
+    min-height: 100dvh;
+    background:url(./images/keep-calm-keep-calm.jpg) no-repeat;
+    background-size: cover;
+    background-position:center;
+    filter: brightness(80%);
+    -webkit-filter: brightness(60%);
+    color: white;
+}

@@ -16,6 +16,7 @@ import DiscountTwoToneIcon from "@mui/icons-material/DiscountTwoTone"; // Ticket
 function Header() {
 
   const isLoggedIn = localStorage.getItem("token");
+  const isAdmin = localStorage.getItem("token");
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -99,6 +100,14 @@ function Header() {
                 </NavLink>
               </li>
             )}
+            {isAdmin && (
+              <li>
+                <NavLink to ="/admin">
+                <span className="span_links">Admin</span>
+                </NavLink>
+              </li>
+            )}
+           
           </ul>
 
           <div className="menu">
