@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../../components/header/Header.jsx";
 import Footer from "../../components/footer/Footer.jsx";
 import "./artistesPage.css";
+import {Helmet} from 'react-helmet'
 
 function Artistes() {
   useEffect(() => {
@@ -43,9 +44,13 @@ function Artistes() {
   return (
     <>
       <Header />
+      <Helmet>
+        <title>LNS - Les artistes</title>
+        <meta name="description" content="Inscrivez-vous et créer un compte 'Les Nuits Secrètes' " />
+    </Helmet>
 
       <div className="container">
-        <main className="main_artistes">
+         <main className="main_artistes">
           <section className="buttonTabs">
             <h1>Les Artistes</h1>
             <div className="buttons_jours">

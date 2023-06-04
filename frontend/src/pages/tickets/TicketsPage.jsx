@@ -2,14 +2,17 @@ import React from "react";
 import "./tickets.css";
 import Header from "../../components/header/Header.jsx";
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import {Helmet} from 'react-helmet'
 
 
 
 function TicketsPage({ price, date, onDelete }) {
   return (
     <>
-    
+    <Helmet>
+        <title>LNS - Tickets</title>
+        <meta name="description" content=" Faites votre choix parmi une sélection de tickets et réservez dès maintenant votre place pour l'événement de vos rêves. " />
+    </Helmet>
       <Header />
      
         <section className="section_tickets">

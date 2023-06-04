@@ -1,23 +1,20 @@
 import React from "react";
 import "./faqPage.css";
 import Header from "../../components/header/Header.jsx";
+import {Helmet} from 'react-helmet'
+
+
+
 
 export default function SimpleAccordion() {
   return (
     <>
+     <Helmet>
+        <title>LNS - Foire Aux Questions - Trouvez des réponses à vos interrogations</title>
+        <meta name="description" content=" Vous avez des questions ? Ne cherchez plus ! Notre foire aux questions vous offre une mine de réponses claires et concises. Découvrez des informations utiles sur une variété de sujets. Simplifiez votre recherche et trouvez les réponses dont vous avez besoin dès maintenant ! " />
+    </Helmet>
       <Header />
-      {/* <section className="faq_wrapper">
-        <div className="faq_inner">
-          <h1>FAQ</h1>
-        <div className ="details">
-          <details>
-          <summary> Qu'est-ce que Les Nuits Secrètes ?</summary>
-          <p>Les Nuits Secrètes est un festival de musique et d'arts qui se déroule chaque année dans la ville de Cambrai, en France. C'est un événement unique où se mélangent des artistes nationaux et internationaux dans une ambiance festive et conviviale.</p>
-          </details>
-        </div>
-        </div>
-      </section> */}
-
+  
       <main className="main_faq">
         <div className="tiger"></div>
         <section className="faq_wrapper">

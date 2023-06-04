@@ -66,11 +66,11 @@ function AddList({ setList }) {
     <div>
       <h1>CRUD</h1>
       <form className="addForm" onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Enter Name" ref={nameRef} />
+        <input type="text" name="name" placeholder="Entrer le billet" ref={nameRef} />
         <input
           type="text"
           name="price"
-          placeholder="Enter Price"
+          placeholder="Entrer le prix"
           ref={priceRef}
         />
         <button type="submit">Ajouter</button>
@@ -82,16 +82,16 @@ function AddList({ setList }) {
 
 function CRUD() {
   const list = [
-    { id: 1, name: "Billet normal", price: 10, date: "01/07/2023" },
-    { id: 2, name: "Billet VIP", price: 25, date: "02/07/2023" },
-    { id: 3, name: "Billet groupe", price: 8, date: "03/07/2023" },
+    { id: 1, name: "Pass 1 jour", price: 45, date: "01/07/2023" },
+    { id: 2, name: "Pass 2 jour", price: 79, date: "02/07/2023" },
+    { id: 3, name: "Pass PREMIUM", price: 139, date: "03/07/2023" },
   ];
   const [lists, setList] = useState(list);
   const [updateState, setUpdateState] = useState(-1);
   return (
     <div className="crud">
       <Header />
-      <div>
+      <div className="form_container">
         <AddList setList={setList} />
         <form onSubmit={handleSubmit}>
           <table>

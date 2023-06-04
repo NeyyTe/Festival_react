@@ -1,6 +1,6 @@
 import "./signup.css";
 import React, { useState } from "react";
-
+import {Helmet} from 'react-helmet'
 
 export default function Signup() {
   const [fname, setFname] = useState("");
@@ -56,70 +56,72 @@ export default function Signup() {
     }
   };
 
-  return (
-    <div className="auth-wrapper">
-      <div className="auth-inner">
-        <form onSubmit={handleSubmit}>
-          <h3>Inscrivez-vous</h3>
-
-          <div className="input_wrapper">
-            <label className="label">Prénom</label>
-            <input className="input"
-              type="text"
-              placeholder="Entrez votre prénom.."
-              onChange={(e) => setFname(e.target.value)}
-            />
-          </div>
-
-          <div className="input_wrapper">
-            <label className="label">Nom</label>
-            <input className="input"
-              type="text"
-              placeholder="Entrez votre nom.."
-              onChange={(e) => setLname(e.target.value)}
-            />
-          </div>
-
-          <div className="input_wrapper">
-            <label className="label">Adresse E-mail</label>
-            <input className="input"
-              type="email"
-              placeholder="Entrez votre e-mail.."
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="input_wrapper">
-            <label className="label">Confirmer l'adresse mail</label>
-            <input className="input"
-              value={ConfirmEmail}
-              type="email"
-              placeholder="Entrez votre e-mail.."
-              onChange={(e) => setConfirmEmail(e.target.value)}
-            />
-          </div>
-
-          <div className="input_wrapper">
-            <label className="label">Mot de passe</label>
-            <input className="input"
-              type="password"
-              placeholder="Entrez votre mot de passe.."
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-
-          <div className="submit_wrapper">
-            <button type="submit" className="btn">
-              S'inscrire
-            </button>
-            {error && (
-              <span style={{ color: "red", marginTop: "10px" }}>
-                {errorMessage}
-              </span>
-            )}
-          </div>
-          
-        </form>
+  return (<>
+       <Helmet>
+        <title>LNS - S'inscrire</title>
+        <meta name="description" content="Inscrivez-vous et créer un compte 'Les Nuits Secrètes' " />
+    </Helmet>
+    <main>
+      <div className="auth-wrapper">
+        <div className="auth-inner">
+          <form onSubmit={handleSubmit}>
+            <h3>Inscrivez-vous</h3>
+            <div className="input_wrapper">
+              <label className="label">Prénom</label>
+              <input className="input"
+                type="text"
+                placeholder="Entrez votre prénom.."
+                onChange={(e) => setFname(e.target.value)}
+              />
+            </div>
+            <div className="input_wrapper">
+              <label className="label">Nom</label>
+              <input className="input"
+                type="text"
+                placeholder="Entrez votre nom.."
+                onChange={(e) => setLname(e.target.value)}
+              />
+            </div>
+            <div className="input_wrapper">
+              <label className="label">Adresse E-mail</label>
+              <input className="input"
+                type="email"
+                placeholder="Entrez votre e-mail.."
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="input_wrapper">
+              <label className="label">Confirmer l'adresse mail</label>
+              <input className="input"
+                value={ConfirmEmail}
+                type="email"
+                placeholder="Entrez votre e-mail.."
+                onChange={(e) => setConfirmEmail(e.target.value)}
+              />
+            </div>
+            <div className="input_wrapper">
+              <label className="label">Mot de passe</label>
+              <input className="input"
+                type="password"
+                placeholder="Entrez votre mot de passe.."
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div className="submit_wrapper">
+              <button type="submit" className="btn">
+                S'inscrire
+              </button>
+              {error && (
+                <span style={{ color: "red", marginTop: "10px" }}>
+                  {errorMessage}
+                </span>
+              )}
+            </div>
+      
+          </form>
+        </div>
       </div>
-    </div>
+    </main>
+    </>
   );
 }

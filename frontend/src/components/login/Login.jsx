@@ -1,7 +1,7 @@
 import "./login.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import {Helmet} from 'react-helmet'
 
 
 export default function Login() {
@@ -63,6 +63,10 @@ export default function Login() {
 
   return (
     <div className="container_wrapper">
+       <Helmet>
+        <title>LNS - Se connecter</title>
+        <meta name="description" content="Connecter-vous à votre compte du festival 'Les Nuits Secrètes'" />
+    </Helmet>
       <div className="container_login">
         <form onSubmit={handleSubmit}>
           {errorMessage && <p>{errorMessage}</p>}

@@ -1,6 +1,7 @@
 
 import React from "react";
 import "./homePage.css";
+import {Helmet} from 'react-helmet'
 
 //Import Composants
 import Header from "../../components/header/Header";
@@ -31,12 +32,16 @@ import justin_bridou from "./images/logos_sponso/justin_bridou.png";
 function HomePage() {
   return (
     <>
+    
       <Header />
       <Home />
       <Slider />
 
       <div className="features_wrapper">
-       
+      <Helmet>
+        <title>Les Nuits Secrètes - Accueil</title>
+        <meta name="description" content="Vibrez au rythme envoûtant des concerts, dansez jusqu'au bout de la nuit, découvrez des spectacles d'art captivants et admirez un incroyable feu d'artifice lors de cet événement inoubliable. Rejoignez-nous maintenant !" />
+    </Helmet>
         <div className="features">
           <div className="features_cards">
             <div>
