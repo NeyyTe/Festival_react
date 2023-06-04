@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 import logo from "./images/logo.png";
 
@@ -15,16 +16,18 @@ function Footer() {
         <div className="footer_container">
           <div className="row">
             <div className="logo_footer footer-col">
-              <div><img src={logo} alt="" /></div>
+              <div>
+                <img src={logo} alt="" />
+              </div>
             </div>
             <div className="premiere_col footer-col">
               <h4>L'entreprise</h4>
               <ul>
                 <li>
-                  <a href="">Mention Légales</a>
+                  <Link to="">Mention Légales</Link>
                 </li>
                 <li>
-                  <a href="">Conditions Générales</a>
+                  <Link to="">Conditions Générales</Link>
                 </li>
               </ul>
             </div>
@@ -33,13 +36,13 @@ function Footer() {
               <h4>Nous Contacter</h4>
               <ul>
                 <li>
-                  <a href="mailto:maxxence.marechal@gmail.com"> Email</a>
+                  <Link to="mailto:maxxence.marechal@gmail.com"> Email</Link>
                 </li>
                 <li>
-                  <a href="tel:+33684169326"> Téléphone</a>
+                  <Link to="tel:+33684169326"> Téléphone</Link>
                 </li>
                 <li>
-                  <a href="">Localisation</a>
+                  <Link to="">Localisation</Link>
                 </li>
               </ul>
             </div>
@@ -48,15 +51,27 @@ function Footer() {
               <div className="social_paiement_container">
                 <h4>Retrouvez-nous sur les réseaux :</h4>
                 <div className="social_links">
-                  <a className="spacing_img_réseaux" href="">
+                  <Link
+                    className="spacing_img_réseaux"
+                    to="https://www.facebook.com/"
+                    target="_blank"
+                  >
                     <img src={Facebook} alt="facebook" />
-                  </a>
-                  <a href="">
-                    <img src={Twitter_logo} alt="twitter" />
-                  </a>
-                  <a className="spacing_img_réseaux" href="">
+                  </Link>
+
+                  <Link to ="https://twitter.com/?lang=fr"  target="_blank">
+                    <img src={Twitter_logo} 
+                    alt="twitter"
+                    />
+                  </Link>
+
+                  <Link
+                    className="spacing_img_réseaux"
+                   to="https://www.instagram.com/"
+                   target="_blank"
+                  >
                     <img src={Insta_logo} alt="instagram" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

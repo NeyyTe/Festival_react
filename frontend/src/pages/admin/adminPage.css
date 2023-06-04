@@ -46,18 +46,27 @@ table td button.delete:hover {
     margin-bottom: 30px;
  
 }
+
+.add_form_wrapper >  h1{
+    color: white;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
 .addForm input {
     width: 230px;
     height: 30px;
     background-color: white;
-    padding: 5px;
+    padding: 10px;
     margin: 0 10px;
+    border-radius: 5px;
+    border: none;
 }
 .addForm button {
     width: 135px;
     color: white;
     height: 35px;
-    background-color: rgb(31, 171, 31);
+    background-color: rgb(23, 122, 23);
     cursor: pointer;
 }
 .addForm button:hover {

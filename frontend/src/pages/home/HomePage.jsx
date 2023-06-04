@@ -2,6 +2,7 @@
 import React from "react";
 import "./homePage.css";
 import {Helmet} from 'react-helmet'
+import { Link } from "react-router-dom";
 
 //Import Composants
 import Header from "../../components/header/Header";
@@ -83,9 +84,9 @@ function HomePage() {
           </div>
         </div>
         <div className="link_information_wrapper">
-          <a class="link_information" href="">
+          <Link to="/faq" class="link_information" >
             Plus d'informations
-          </a>
+          </Link>
         </div>
 .
 

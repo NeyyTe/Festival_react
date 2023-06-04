@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css";
 import logo2 from './images/logo2.png';
 import "../media_query/MediaQuery.css";
+import {Link} from 'react-router-dom'
 
 function Home() {
   return (
@@ -27,13 +28,13 @@ function Home() {
               <p>Au Lycée Fénélon</p>
             </div>
             <div className="button_tickets">
-              <a className="neon-button" href="">
+              <Link to=""className="neon-button" >
                 Acheter vos tickets !
-              </a>
+              </Link>
             </div>
 
             <div className="arroww bounce">
-              <a className="fa fa-arrow-down fa-2x" href=""></a>
+              <Link to=""className="fa fa-arrow-down fa-2x" ></Link>
             </div>
           </div>
         </div>
