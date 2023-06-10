@@ -79,7 +79,7 @@ transition: 1s ease-in-out;
 .details
 {
     width: 100%;
-    min-width: 260px;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -115,7 +115,7 @@ details[open] summary ~ * {
 summary
 {
     width: 100%;
-    padding: 10px 0 10px 35px;
+    padding: 10px 20px 10px 35px;
  
     list-style-type: none; 
     border-radius: 5px;

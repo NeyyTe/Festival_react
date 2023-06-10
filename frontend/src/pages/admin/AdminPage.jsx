@@ -56,13 +56,13 @@ function CRUD() {
       <div className="form_container">
         <AddList setList={setList} />
         <form onSubmit={handleSubmit}>
-          <table>
+          <table >
             {lists.map((current) =>
               updateState === current.id ? (
                 <EditList current={current} lists={lists} setList={setList} />
               ) : (
                 <tr>
-                  <td>{current.name}</td>
+                  <td >{current.name}</td>
                   <td>{current.price}</td>
                   <td>
                     <button

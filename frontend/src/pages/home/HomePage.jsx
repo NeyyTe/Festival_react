@@ -29,7 +29,6 @@ import quechua from "./images/logos_sponso/quechua.svg";
 import justin_bridou from "./images/logos_sponso/justin_bridou.png";
 
 
-
 function HomePage() {
   return (
     <>

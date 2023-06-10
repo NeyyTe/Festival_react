@@ -1,8 +1,8 @@
 import React from "react";
 import "./home.css";
-import logo2 from './images/logo2.png';
+import logo2 from "./images/logo2.png";
 import "../media_query/MediaQuery.css";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -14,7 +14,13 @@ function Home() {
           </div>
 
           <div className="right">
-            <div><img className="logo_main"src={logo2} alt="Logo Les Nuits Secrètes" /></div>
+            <div>
+              <img
+                className="logo_main"
+                src={logo2}
+                alt="Logo Les Nuits Secrètes"
+              />
+            </div>
             <div className="main_title_right">
               <h1>LES NUITS SECRÈTES</h1>
             </div>
@@ -28,13 +34,9 @@ function Home() {
               <p>Au Lycée Fénélon</p>
             </div>
             <div className="button_tickets">
-              <Link to=""className="neon-button" >
+              <Link to="/tickets" className="neon-button">
                 Acheter vos tickets !
               </Link>
-            </div>
-
-            <div className="arroww bounce">
-              <Link to=""className="fa fa-arrow-down fa-2x" ></Link>
             </div>
           </div>
         </div>

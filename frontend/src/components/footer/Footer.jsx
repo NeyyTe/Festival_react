@@ -1,6 +1,7 @@
 import React from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
+import "../media_query/MediaQuery.css";
 
 import logo from "./images/logo.png";
 
@@ -17,7 +18,7 @@ function Footer() {
           <div className="row">
             <div className="logo_footer footer-col">
               <div>
-                <img src={logo} alt="" />
+                <img src={logo} alt="logo LNS" />
               </div>
             </div>
             <div className="premiere_col footer-col">
@@ -34,17 +35,19 @@ function Footer() {
 
             <div className="footer-col">
               <h4>Nous Contacter</h4>
-              <ul>
-                <li>
-                  <Link to="mailto:maxxence.marechal@gmail.com"> Email</Link>
-                </li>
-                <li>
-                  <Link to="tel:+33684169326"> Téléphone</Link>
-                </li>
-                <li>
-                  <Link to="">Localisation</Link>
-                </li>
-              </ul>
+              <div>
+                <ul>
+                  <li>
+                    <Link to="mailto:maxxence.marechal@gmail.com"> Email</Link>
+                  </li>
+                  <li>
+                    <Link to="tel:+33684169326"> Téléphone</Link>
+                  </li>
+                  <li>
+                    <Link to="">Localisation</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <div className="footer-col">
@@ -59,16 +62,14 @@ function Footer() {
                     <img src={Facebook} alt="facebook" />
                   </Link>
 
-                  <Link to ="https://twitter.com/?lang=fr"  target="_blank">
-                    <img src={Twitter_logo} 
-                    alt="twitter"
-                    />
+                  <Link to="https://twitter.com/?lang=fr" target="_blank">
+                    <img src={Twitter_logo} alt="twitter" />
                   </Link>
 
                   <Link
                     className="spacing_img_réseaux"
-                   to="https://www.instagram.com/"
-                   target="_blank"
+                    to="https://www.instagram.com/"
+                    target="_blank"
                   >
                     <img src={Insta_logo} alt="instagram" />
                   </Link>

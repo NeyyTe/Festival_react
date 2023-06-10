@@ -45,10 +45,6 @@ export default function Signup() {
         window.location.href = "/login"; // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
       }
 
-      // if (res.ok) {
-      //   navigate("/login"); // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
-      // }
-
     } catch (error) {
       console.error(error);
       setError(true);
@@ -61,6 +57,7 @@ export default function Signup() {
         <title>LNS - S'inscrire</title>
         <meta name="description" content="Inscrivez-vous et créer un compte 'Les Nuits Secrètes' " />
     </Helmet>
+    
     <main>
       <div className="auth-wrapper">
         <div className="auth-inner">

@@ -42,7 +42,7 @@
     text-align: center;
     padding: 20px 0;
   }
-  .nav_links li:nth-child(5) {
+  .nav_links li:nth-child(4) {
     border-radius: 0px;
   }
 
@@ -150,9 +150,7 @@
   .section1_content{
     gap: 0;
   }
-  .section1_experience ~ div{
-
-  }
+  
 
   .section1_text h3{
     text-align: center;
@@ -161,11 +159,65 @@
 
 
 
+/* ===========================
+          TICKETS_PAGE
+===========================*/
+@media all and (max-width:1720px) {
+.bg_fleurs_left,.bg_fleurs_right{
+  display: none;
+}
+}
+
+@media all and (max-width:1720px) {
+.section_tickets{
+  padding-top: 9rem;
+}
+}
+
+/* ===========================
+          FAQ_PAGE
+===========================*/
+@media all and (max-width:1290px) {
+  .tiger{
+   display: none;
+  }
+  .faq_wrapper h2::before,
+.faq_wrapper h2::after{
+    /* font-size: 2rem; */
+    display: none;
+  }
+}
+  @media all and (max-width:462px){
+  .faq_wrapper h2{
+font-size: 2.5rem;
+  }
+}
 
 
 /* ===========================
             FOOTER
 ===========================*/
+@media all and (max-width:1300px) {
+  .row{
+    max-width:100%;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  /* .logo_footer{
+    margin-left: 100px;
+  } */
+  .footer-col h4 {
+    margin: 15px 0;
+  }
+
+  .footer_col{
+    min-width: 100%;
+  }
+}
+
+
+
 @media all and (max-width:696px) {
   .footer .dog{
     width: 400px;

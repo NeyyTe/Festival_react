@@ -1,31 +1,34 @@
+.footer {
+  width: 100%;
+  height: 100%;
+  background:black;
+
+  position: relative;
+ 
+}
+
 .footer_container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
-  
+
     padding: 50px 0;
     padding-bottom: 250px;
+
+
   }
   
-  .footer {
-    width: 100%;
-    height: 100%;
-    background:black;
-  
-    position: relative;
-   
-  }
   
   .row {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    
+    padding: 0 5%;
   }
   
   .footer-col {
-    width: 22%;
+    min-width: 25%;
     padding: 0 15px;
     
   }
@@ -54,6 +57,7 @@
     margin-bottom: 40px;
     position: relative;
     font-family: "Poppins", sans-serif;
+    word-break: break-word;
     
   }
   
@@ -69,7 +73,9 @@
   }
 
   .logo_footer{
-margin-right: 100px;
+    min-width: 300px;
+    max-width: 300px;
+/* margin-right: 100px; */
 transition: 0.3s ease-in;
   }
   .logo_footer:hover{
@@ -79,12 +85,12 @@ transition: 0.3s ease-in;
   /* ------------------------  Social link & Icons D ------------------------ */
   .social_links {
     display: flex;
-    justify-content: space-center;
+   
     gap: 25px;
   }
   
   .social_links a img {
-    width: 40px;
+    max-width: 40px;
     transition: all 0.3s ease;
   }
   
