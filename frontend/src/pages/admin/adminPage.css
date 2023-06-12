@@ -6,7 +6,7 @@
     background-position:center;
  
     display: flex;
-   
+   justify-content: center;
     align-items: center;
 }
 
@@ -53,9 +53,9 @@ table td button.delete:hover {
     text-align: center;
 }
 
-.addForm input {
+.addForm input,.addForm select {
     width: 230px;
-    height: 30px;
+    height: 40px;
     background-color: white;
     padding: 10px;
     margin: 0 10px;

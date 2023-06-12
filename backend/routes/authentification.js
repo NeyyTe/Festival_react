@@ -3,10 +3,10 @@ const router = express.Router();
 const userSchema = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const timeToken = 2*14*60*60; // Durée de validité du token
-const createToken = (id) => {return jwt.sign({id},"secret_key",{expiresIn : timeToken})}; // Génère un JWT en utilisant l'identifiant, une clé secrète ("secret_key") et la durée de validité définie précédemment
 
-
+const createToken = (id) => {
+  return jwt.sign({ id }, "secret_key", { expiresIn: '24h' }); // Expire dans 24h
+};
 
 router.post("/register", async (req, res) => {
   try {
@@ -14,7 +14,6 @@ router.post("/register", async (req, res) => {
     const userExist = await userSchema.findOne({ email });
     if (userExist) {
       return res.status(400).json("Cet utilisateur est déjà crée");
-      
     }
     const salt = await bcrypt.genSalt(11);
     const cryptedPassword = await bcrypt.hash(password, salt);
@@ -25,17 +24,13 @@ router.post("/register", async (req, res) => {
       password: cryptedPassword,
     });
     const userSaved = await newUser.save();
-    return res.status(201).json({ message: "Votre compte enregistré avec succès" });
-
-  } 
-  
-  catch (err) {
+    return res
+      .status(201)
+      .json({ message: "Votre compte enregistré avec succès" });
+  } catch (err) {
     res.status(500).json(err);
   }
 });
-
-
-
 
 // ...
 
@@ -54,12 +49,10 @@ router.post("/login", async (req, res) => {
     const token = createToken(user._id);
 
     const { password: userPassword, ...userWithoutPassword } = user._doc;
-    res.status(200).json({user: user, token: token });
+    res.status(200).json({ user: user, token: token });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
-
 
 module.exports = router;

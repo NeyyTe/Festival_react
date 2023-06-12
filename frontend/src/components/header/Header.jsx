@@ -14,7 +14,6 @@ import InfoTwoToneIcon from "@mui/icons-material/InfoTwoTone"; //Infos
 import DiscountTwoToneIcon from "@mui/icons-material/DiscountTwoTone"; // Tickets
 
 function Header() {
-
   const isLoggedIn = localStorage.getItem("token");
   const isAdmin = localStorage.getItem("token");
 
@@ -52,24 +51,26 @@ function Header() {
           <ul>
             <li>
               <NavLink to="/" aria-current="page">
-                <span className="span_links">Accueil</span>{" "}
+                <span aria-label="Close" className="span_links">
+                  Accueil
+                </span>
                 <span className="icons">
                   <HomeTwoToneIcon fontSize="large" />
                 </span>
-              </NavLink>{" "}
+              </NavLink>
             </li>
             <li>
               <NavLink to="/artistes">
-                <span className="span_links">Artistes</span>{" "}
+                <span className="span_links">Artistes</span>
                 <span className="icons">
                   <PeopleAltTwoToneIcon fontSize="large" />
                 </span>
               </NavLink>
             </li>
-            
+
             <li>
               <NavLink to="/faq">
-                <span className="span_links">FAQ</span>{" "}
+                <span className="span_links">FAQ</span>
                 <span className="icons">
                   <InfoTwoToneIcon fontSize="large" />
                 </span>
@@ -102,12 +103,11 @@ function Header() {
             )}
             {isAdmin && (
               <li>
-                <NavLink to ="/admin">
-                <span className="span_links">Admin</span>
+                <NavLink to="/admin">
+                  <span className="span_links">Admin</span>
                 </NavLink>
               </li>
             )}
-           
           </ul>
 
           <div className="menu">
@@ -119,7 +119,6 @@ function Header() {
             </span>
           </div>
         </nav>
-     
       </header>
     </>
   );

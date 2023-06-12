@@ -62,68 +62,69 @@ export default function Login() {
   };
 
   return (
-    <div className="container_wrapper">
-       <Helmet>
-        <title>LNS - Se connecter</title>
-        <meta name="description" content="Connecter-vous à votre compte du festival 'Les Nuits Secrètes'" />
-    </Helmet>
-      <div className="container_login">
-        <form onSubmit={handleSubmit}>
-          {errorMessage && <p>{errorMessage}</p>}
-          <div className="brand-logo"></div>
-          <div className="brand-title">Les Nuits Secrètes</div>
-
-          <div className="inputs">
-            <label className="label">E-mail</label>
-            <input
-              className="input"
-              type="email"
-              placeholder="email@exemple.com"
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <label className="label">Mot de passe</label>
-            <input
-              className="input"
-              type="password"
-              placeholder="Minimum de 6 lettres"
-              // minLength="6"
-              required
-              autoComplete="current-password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
+    <main>
+      <div className="container_wrapper">
+         <Helmet>
+          <title>LNS - Se connecter</title>
+          <meta name="description" content="Connecter-vous à votre compte du festival 'Les Nuits Secrètes'" />
+      </Helmet>
+        <div className="container_login">
+          <form onSubmit={handleSubmit}>
+            {errorMessage && <p>{errorMessage}</p>}
+            <div className="brand-logo"></div>
+            <div className="brand-title">Les Nuits Secrètes</div>
             <div className="inputs">
-              <label className="label">Administrateur</label>
+              <label className="label">E-mail</label>
               <input
-                id="admin"
-                type="checkbox"
-                checked={isAdmin}
-                onChange={(e) => setIsAdmin(e.target.checked)}
+                className="input"
+                type="email"
+                placeholder="email@exemple.com"
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
-            </div>
-            {isAdmin && (
-              <div>
-                <label className="label">Code d'accès administrateur</label>
+              <label className="label">Mot de passe</label>
+              <input
+                className="input"
+                type="password"
+                placeholder="Minimum de 6 lettres"
+                // minLength="6"
+                required
+                autoComplete="current-password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <div className="inputs">
+                <label className="label">Administrateur</label>
                 <input
-                  className="input"
-                  type="password"
-                  placeholder="Code d'accès"
-                  minLength="4"
-                  required={isAdmin}
-                  onChange={(e) => setAdminCode(e.target.value)}
+                  id="admin"
+                  type="checkbox"
+                  checked={isAdmin}
+                  onChange={(e) => setIsAdmin(e.target.checked)}
                 />
               </div>
-            )}
-            <button className="button_login" type="submit">
-              SE CONNECTER
-            </button>
-            <p className="forgot-password">
-              Pas encore inscrit ? <Link to="/signup">Créer un compte</Link>
-            </p>
-          </div>
-        </form>
+              {isAdmin && (
+                <div>
+                  <label className="label">Code d'accès administrateur</label>
+                  <input
+                    className="input"
+                    type="password"
+                    placeholder="Code d'accès"
+                    minLength="4"
+                    required={isAdmin}
+                    onChange={(e) => setAdminCode(e.target.value)}
+                  />
+                </div>
+              )}
+              <button className="button_login" type="submit">
+                SE CONNECTER
+              </button>
+              <p className="forgot-password">
+                Pas encore inscrit ? <Link to="/signup">Créer un compte</Link>
+              </p>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
 

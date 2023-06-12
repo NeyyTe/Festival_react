@@ -25,7 +25,7 @@ function Home() {
               <h1>LES NUITS SECRÈTES</h1>
             </div>
 
-            <p className="premier_concert_rock">Le premier concert à Cambrai</p>
+            <p className="premier_concert_rock"><strong>Le plus grand concert de Cambrai</strong></p>
 
             <div className="date">
               <p>15 - 17 Juillet 2023</p>

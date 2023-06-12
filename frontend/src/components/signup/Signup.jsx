@@ -42,7 +42,7 @@ export default function Signup() {
 
 
       if (response.ok) {
-        window.location.href = "/login"; // Remplacez /login par l'URL de redirection souhaitée après l'inscription réussie
+        window.location.href = "/login"; // Remplacez /login par l'URL de redirection souhaitée après inscription réussie
       }
 
     } catch (error) {

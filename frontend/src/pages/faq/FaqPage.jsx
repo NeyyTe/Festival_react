@@ -10,7 +10,7 @@ export default function SimpleAccordion() {
   return (
     <>
      <Helmet>
-        <title>LNS - Foire Aux Questions - Trouvez des réponses à vos interrogations</title>
+        <title>Foire Aux Questions - Les Nuits Secrètes</title>
         <meta name="description" content=" Vous avez des questions ? Ne cherchez plus ! Notre foire aux questions vous offre une mine de réponses claires et concises. Découvrez des informations utiles sur une variété de sujets. Simplifiez votre recherche et trouvez les réponses dont vous avez besoin dès maintenant ! " />
     </Helmet>
       <Header />

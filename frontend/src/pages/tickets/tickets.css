@@ -153,10 +153,10 @@ top: 28%;
 }
 .bg_fleurs_right{
     background: url(./images/fleurs.svg) no-repeat;
-    height: 25rem;
+    height: 504px;
     top: 20%;
     right: -30px;
-    width: 20rem;
+    min-width: 350px;
     position: absolute;
     z-index: 12;
     transform: scaleX(-1); /* Pour flip l'image horizontalement*/

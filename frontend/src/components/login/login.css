@@ -2,7 +2,7 @@
   
   height: 100dvh;
   background: #131136;
-
+padding: 2rem;
   display: flex;
   align-items: center;
   text-align: center;
@@ -11,9 +11,11 @@
 
 .container_login {
   width: 500px;
-  height: mincontent;
+
+  height: min-content;
   border-radius: 20px;
   padding: 40px;
+ margin-top: 5rem;
   box-sizing: border-box;
   background: #131136;
   box-shadow:  5px 5px 10px #09081a,
@@ -54,7 +56,7 @@
   width: 100%;
   padding: 0;
   border: none;
-  outline: none;
+ outline-color: transparent;
   box-sizing: border-box;
 }
 
@@ -103,9 +105,13 @@
   transition: 0.2s ease-in-out;
 }
 
+
 .button_login:focus {
   color: #000000;
   background-color: blueviolet;
+  box-shadow: inset 10px 10px 21px #461673,
+  inset -10px -10px 21px #ce40ff;
+  transition: 0.2s ease-in-out;
 }
 
 .forgot-password,

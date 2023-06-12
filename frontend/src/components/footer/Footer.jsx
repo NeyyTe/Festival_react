@@ -18,7 +18,7 @@ function Footer() {
           <div className="row">
             <div className="logo_footer footer-col">
               <div>
-                <img src={logo} alt="logo LNS" />
+                <img loading="lazy" src={logo} alt="logo LNS" />
               </div>
             </div>
             <div className="premiere_col footer-col">
@@ -59,11 +59,11 @@ function Footer() {
                     to="https://www.facebook.com/"
                     target="_blank"
                   >
-                    <img src={Facebook} alt="facebook" />
+                    <img loading="lazy" src={Facebook} alt="facebook" />
                   </Link>
 
                   <Link to="https://twitter.com/?lang=fr" target="_blank">
-                    <img src={Twitter_logo} alt="twitter" />
+                    <img loading="lazy" src={Twitter_logo} alt="twitter" />
                   </Link>
 
                   <Link
@@ -71,7 +71,7 @@ function Footer() {
                     to="https://www.instagram.com/"
                     target="_blank"
                   >
-                    <img src={Insta_logo} alt="instagram" />
+                    <img loading="lazy"src={Insta_logo} alt="instagram" />
                   </Link>
                 </div>
               </div>
